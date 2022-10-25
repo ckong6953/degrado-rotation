@@ -1,0 +1,11 @@
+<ROSETTASCRIPTS>
+    <SCOREFXNS> 
+        <ScoreFunction name="ref15" weights="ref2015">
+        </ScoreFunction>
+    </SCOREFXNS>
+    <RESIDUE_SELECTORS>
+    </RESIDUE_SELECTORS>
+    <TASKOPERATIONS>
+        
+    </TASKOPERATIONS>
+</ROSETTASCRIPTS>

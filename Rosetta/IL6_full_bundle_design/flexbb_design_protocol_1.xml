@@ -1,0 +1,101 @@
+<ROSETTASCRIPTS>
+	<SCOREFXNS>
+		<ScoreFunction name="ref15" weights="ref2015">
+			<Reweight scoretype="atom_pair_constraint" weight="1"/>
+		</ScoreFunction>
+		<ScoreFunction name="ref15_1" weights="ref2015">
+			<Reweight scoretype="aa_composition" weight="1" />
+			<Reweight scoretype="netcharge" weight="1.0" />
+			<Reweight scoretype="atom_pair_constraint" weight="1"/>
+			<Set aa_composition_setup_file="no_met_thr_ser_asn.comp" />
+			<Set netcharge_setup_file="netcharge.charge" />
+		</ScoreFunction>
+	</SCOREFXNS>
+	<RESIDUE_SELECTORS>
+	</RESIDUE_SELECTORS>
+	<TASKOPERATIONS>
+		<InitializeFromCommandline name="ifcl"/>
+		<ReadResfile name="resfile" filename="resfile.txt"/>
+		<ExtraRotamersGeneric name="extrachi" ex1="1" ex2="1"
+							  ex1_sample_level="1" ex2_sample_level="1"
+							  extrachi_cutoff="14"/>
+		<IncludeCurrent name="include_curr" />
+	</TASKOPERATIONS>
+	<FILTERS>
+		<PackStat name="pstat" confidence="0" threshold="0.4" repeats="10"/>
+		<PackStat name="pstat_mc" threshold="0" repeats="10"/>
+		<NetCharge name="net_charge" confidence="0"/>
+		<ScoreType name="total_score_1" scorefxn="ref15_1" score_type="total_score"
+				   threshold="0"/>
+		<ScoreType name="total_score" scorefxn="ref15" score_type="total_score"
+				   threshold="0"/>
+		<BuriedUnsatHbonds name="bu" report_sc_heavy_atom_unsats="true" scorefxn="ref15" cutoff="0"
+						   residue_surface_cutoff="20.0" ignore_surface_res="true" print_out_info_to_pdb="true"
+		                   confidence="0"/>
+		 <HbondsToResidue name="hbonds_filter" scorefxn="ref15" partners="1" energy_cutoff="-0.25" backbone="true" bb_bb="false"
+		 				  sidechain="true" residue="10" from_other_chains="true" from_same_chain="false"/>
+
+	</FILTERS>
+	<MOVERS>
+		<ConstraintSetMover name="atomic" cst_file="constraints.cst"/>
+		<PackRotamersMover name="pack" scorefxn="ref15_1"
+						   task_operations="ifcl,resfile,include_curr,extrachi"/>
+		<PackRotamersMover name="pack_fast" scorefxn="ref15_1"
+						   task_operations="ifcl,resfile,include_curr"/>
+		<MinMover name="min_bb" scorefxn="ref15" tolerance="0.0000001" max_iter="1000" chi="false" bb="true">
+			<MoveMap name="map_bb">
+				<Span begin="1" end="166" bb="true" chi="false" />
+				<Span begin="200" end="301" bb="true" chi="false" />
+			</MoveMap>
+		</MinMover>
+		<Idealize name="idealize"/>
+		<MinMover name="min_sc" scorefxn="ref15" tolerance="0.0000001" max_iter="1000" chi="true" bb="false">
+			<MoveMap name="map_sc">
+				<Span begin="1" end="166" bb="false" chi="true" />
+				<Span begin="200" end="301" bb="false" chi="true" />
+			</MoveMap>
+		</MinMover>
+		<MinMover name="min_sc_bb" scorefxn="ref15" tolerance="0.0000001" max_iter="1000" chi="true" bb="true">
+			<MoveMap name="map_sc_bb">
+				<Span begin="1" end="166" bb="true" chi="true" />
+				<Span begin="200" end="301" bb="true" chi="true" />
+			</MoveMap>
+		</MinMover>
+		<ParsedProtocol name="parsed_pack_fast" >
+			<Add mover_name="pack_fast"/>
+			<Add mover_name="min_bb"/>
+		</ParsedProtocol>
+		<ParsedProtocol name="parsed_pack" >
+			<Add mover_name="pack"/>
+			<Add mover_name="min_bb"/>
+			<Add mover_name="min_sc"/>
+		</ParsedProtocol>
+		<GenericMonteCarlo name="pack_mc" preapply="0" trials="3" temperature="0.03"
+								  filter_name="pstat_mc" sample_type="high" mover_name="parsed_pack">
+				<Filters>
+					<AND filter_name="total_score_1" temperature="15" sample_type="low"/>
+				</Filters>
+		</GenericMonteCarlo>
+		<GenericMonteCarlo name="pack_fast_mc" preapply="0" trials="2" temperature="0.03"
+								  filter_name="pstat_mc" sample_type="high" mover_name="parsed_pack_fast">
+				<Filters>
+					<AND filter_name="total_score_1" temperature="15" sample_type="low"/>
+				</Filters>
+		</GenericMonteCarlo>
+	</MOVERS>
+	<APPLY_TO_POSE>
+	</APPLY_TO_POSE>
+	<PROTOCOLS>
+		<Add mover="atomic"/>
+		<Add mover_name="parsed_pack_fast"/>
+		<Add mover_name="pack_fast_mc"/>
+		<Add mover_name="pack_mc"/>
+		<Add mover_name="min_sc_bb"/>
+		<Add filter_name="pstat"/>
+		<Add filter_name="net_charge"/>
+		<Add filter_name="total_score"/>
+		<Add filter_name="bu"/>
+		<Add filter_name="hbonds_filter"/>
+	</PROTOCOLS>
+	<OUTPUT scorefxn="ref15_1"/>
+</ROSETTASCRIPTS>
