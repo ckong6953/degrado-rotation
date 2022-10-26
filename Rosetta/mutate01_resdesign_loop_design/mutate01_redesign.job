@@ -35,7 +35,7 @@ date
 hostname
 
 echo $options
-rosetta_scripts.linuxgccrelease -s mutate01_redesign.pdb -nstruct 1 -parser:protocol mutate01_redesign_loop.xml -ignore_zero_occupancy false -out:path:pdb output -out:path:score output -packing:multi_cool_annealer 10 -packing:linmem_ig 1 -run:constant_seed -run:jran $SGE_TASK_ID -out:suffix mutate01_design_$SGE_TASK_ID -out:no_nstruct_label
+rosetta_scripts.linuxgccrelease -s mutate01_redesign.pdb -nstruct 1 -parser:protocol mutate01_redesign_loop.xml -ignore_zero_occupancy false -out:path:pdb output -out:path:score output -packing:multi_cool_annealer 10 -packing:linmem_ig 10 -run:constant_seed -run:jran $SGE_TASK_ID -out:suffix mutate01_design_$SGE_TASK_ID -out:no_nstruct_label
 
 qstat -j $JOB_ID                                  # This is useful for debugging and usage purposes,
                                                   # e.g. "did my job exceed its memory request?"

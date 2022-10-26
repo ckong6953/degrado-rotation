@@ -11,8 +11,8 @@
     </RESIDUE_SELECTORS>
     <!-- Task Operations-->
     <TASKOPERATIONS>
-        <InitializeFromCommandline name="ifc1"/>
-        <ReadResfile name="resfile" filename="resfile.txt">
+        <InitializeFromCommandline name="ifcl"/>
+        <ReadResfile name="resfile" filename="resfile.txt" />
         <ExtraRotamersGeneric name="extrachi" ex1="1" ex2="1"
                                 ex1_sample_level="1" ex2_sample_level="2"
                                 extrachi_cutoff="14" />
@@ -78,13 +78,13 @@
     </APPLY_TO_POSE>
     <!-- Protocols -->
     <PROTOCOLS>
-        <add mover_name="parsed_pack_fast"/>
-        <add mover_name="pack_fast_mc"/>
-        <add mover_name="pack_mc"/>
-        <add mover_name="min_sc_bb"/>
-        <add filter_name="pstat"/>
-        <add filter_name="net_charge"/>
-        <add filter_name="total_score" />
+        <Add mover_name="parsed_pack_fast"/>
+        <Add mover_name="pack_fast_mc"/>
+        <Add mover_name="pack_mc"/>
+        <Add mover_name="min_sc_bb"/>
+        <Add filter_name="pstat"/>
+        <Add filter_name="net_charge"/>
+        <Add filter_name="total_score" />
     </PROTOCOLS>
     <OUTPUT scorefxn="ref15"/>
 </ROSETTASCRIPTS>
