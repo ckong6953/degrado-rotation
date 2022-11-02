@@ -1,17 +1,24 @@
+# gen_fasta_csv.py
 # This is a code to create fasta files per chain for Rosetta outputs
 # Please place this file outside of the output folder
+# This code is to help organize the outputs from Rosetta for further processing
+# 1. This generates fasta files for individual chains for a tetramer complex (I am working on a way to have a user-defined chain number)
+# 2. Additionally, this takes the score .sc files generated and organizes them into a working CSV file for easy analysis. 
 
 from Bio.PDB import *
 import os
 import pandas as pd
 
+# Defines the output subdirectory that contains all the Rosetta outputs
 directory_in_str = "./output/"
 
+# Dictionary of amino acids, useful for parsing through for sequences. 
 AA_dict = {'CYS': 'C', 'ASP': 'D', 'SER': 'S', 'GLN': 'Q', 'LYS': 'K',
      'ILE': 'I', 'PRO': 'P', 'THR': 'T', 'PHE': 'F', 'ASN': 'N', 
      'GLY': 'G', 'HIS': 'H', 'LEU': 'L', 'ARG': 'R', 'TRP': 'W', 
      'ALA': 'A', 'VAL':'V', 'GLU': 'E', 'TYR': 'Y', 'MET': 'M'}
 
+# Filters through the output folder and compiles PDB files in a list along with the names of these files.
 def gen_structures_list(directory_in_str):
     structures_list = []
     descript_list = []
@@ -26,6 +33,8 @@ def gen_structures_list(directory_in_str):
             descript_list.append(filename[:-4])
     return structures_list, descript_list
 
+# Creates a list for each chain.
+# Only works for tetrameric complexes at the moment. 
 def create_chains(structures_list):
     chain_A_list = []
     chain_B_list = []
@@ -51,6 +60,7 @@ def create_chains(structures_list):
                 chain_count += 1
     return chain_A_list, chain_B_list, chain_C_list, chain_D_list
 
+# Creates the lines in the fasta file. 
 def create_fasta(header, seq):
     sequences = ""
     for i in range(0,len(header)):
@@ -58,6 +68,8 @@ def create_fasta(header, seq):
         sequences += sequence
     return sequences
 
+# Creates the dictionary of all the chains and the names of the structures generated from Rosetta. 
+# This is to create a compilation of names of sequences to the actual sequences residues. 
 def create_seq_dict(list_A, list_B, list_C, list_D, descript_list):
     seq_dict = {}
     for i in range (0, len(structures_list)):
@@ -65,6 +77,10 @@ def create_seq_dict(list_A, list_B, list_C, list_D, descript_list):
         seq_dict[descript_list[i]] = seq_descript
     return seq_dict
 
+# MAIN FUNCTION
+# Creates a dataframe of all the different scoring functions in Rosetta for a given sequence
+# **IMPORTANT**
+# You will need to add/remove scores according to your Rosetta run. 
 def gen_df(directory_in_str, chain_A_list, chain_B_list, chain_C_list, chain_D_list, descript_list):
     
     seq_dict = create_seq_dict(chain_A_list, chain_B_list, chain_C_list, chain_D_list, descript_list)
@@ -137,6 +153,7 @@ def gen_df(directory_in_str, chain_A_list, chain_B_list, chain_C_list, chain_D_l
     df = pd.DataFrame(data=d)
     return df
 
+# Function calls
 
 structures_list, descript_list = gen_structures_list(directory_in_str)
 chain_A_list, chain_B_list, chain_C_list, chain_D_list = create_chains(structures_list)
@@ -163,6 +180,7 @@ saveChainDFasta.close()
 
 print("Succesfully created fasta files for each chain!")
 
+# Generates a CSV file named score_data.csv
 df = gen_df(directory_in_str, chain_A_list, chain_B_list, chain_C_list, chain_D_list, descript_list)
 df = df.sort_values(by=['Total Score'])
 df.to_csv('score_data.csv',index=False)
