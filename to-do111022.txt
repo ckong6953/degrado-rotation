@@ -1,0 +1,31 @@
+Get rid of GS, 
+
+11/10/22:
+- Dave is now doing the expression and purification of the proteins that we are designing (doing it with Yuda)
+- Bill wants sequences by the end of next week
+- gene blocks will come after thanksgiving (expression and purification)
+Bill Updates:
+- Protease cleavage... may not unbind
+- Keep peptides to 21 amino acids
+- May need to add purposeful destabilization (polar residues towards the end, Leu/Ile -> Ala (little bit of room there), putting in charge)
+- Have PDB files ready by next week
+- What is a good metric? Take a look for a sequences that we do choose. 
+- Bring four peptides... Bring top ten and then the remainder. 
+
+- Loops
+- Don't need to model those in... use this GSSGSS(LINKER)GSGGSG
+
+- Joe
+- Review of antimicrobial peptides
+- Looked through...
+ (Dermaspetin: threads very nice for heaptda repeats)
+(magainin 2-23: threads very nicely with exception of glutamic acid of Glu position)
+- thread these
+- Run rosetta (pack the masking peptide)
+- energy and pack stat
+
+
+~/rosetta_bin_linux_2019.35.60890_bundle/main/source/src/apps/public/symmetry/make_symmdef_file.pl -m NCS -p spONT.pdb -a A -b B > spONT.symm
+*then, you take the sym file and the input file and use it for design - make sure to return to the right chains
+
+Run all through alphafold
