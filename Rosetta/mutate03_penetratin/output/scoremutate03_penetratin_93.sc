@@ -1,0 +1,3 @@
+SEQUENCE: 
+SCORE: total_score dslf_fa13    fa_atr    fa_dun   fa_elec fa_intra_rep fa_intra_sol_xover4              fa_rep              fa_sol hbond_bb_sc hbond_lr_bb    hbond_sc hbond_sr_bb lk_ball_wtd net_charge netcharge     omega   p_aa_pp pro_close     pstat rama_prepro         ref yhh_planarity description 
+SCORE:     -76.249     0.000  -348.892   138.001  -101.438        0.685              19.425              30.966             293.374       0.000       0.000     -13.875     -46.767     -13.627     -2.000     0.000     1.560    -4.164     0.000     0.456     -12.837     -18.661         0.000 Re-chained_monomermutate03_penetratin_93

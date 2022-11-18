@@ -1,0 +1,21 @@
+1. Take the "mutate01_rosetta_input" object in the pymol session and break it up into 4 chains, because rosetta can't handle gaps. Chains B+D are fixed, chains A+C are variable. I named this new pdb "Re-chained.pdb"
+
+** the input file to rosetta MUST be just the monomer for symmetry to work, so I made a pdb named Re-chained_monomer.pdb to be used as the input file of rosettascripts.
+
+2. We're going to give rosetta these separated chains without loops, and you'll just manually add in the loops after all the design is done
+3. Generate symmetry file for Rosetta so that rosetta knows chains A+B are a monomer and C+D is the dimer. Run "generate_sym_file.sh", changing my rRosetta path to your rosetta path. but you don't have to do this because it'll give you exactly the same output symmetry file, called symmdef.txt
+
+4. Add symmetry into your xml file by using the SetupForSymmetry mover
+
+5. Make scorefunction know about symmetry by adding "symmetric="1"" to the scorefunction tag
+
+6. Add setup_symm mover into protocols, making sure it's the first mover listed
+
+7. I changed the "PackRotamersMover" to "SymPackRotamersMover". Changed all the "MinMover"'s to "SymMinMover" 
+
+8. resfile only needs chains A and B, bc the symmetry definition file will generate C and D.
+
+9. replace the rosetta command in your job script with:
+
+rosetta_scripts.linuxgccrelease -s -s Re-chained_monomer.pdb -nstruct 1 -parser:protocol design.xml -ignore_zero_occupancy false -out:path:pdb output -out:path:score output -packing:multi_cool_annealer 10 -packing:linmem_ig 10 -run:constant_seed -run:jran $SGE_TASK_ID -out:suffix mutate01_design_$SGE_TASK_ID -out:no_nstruct_label
+

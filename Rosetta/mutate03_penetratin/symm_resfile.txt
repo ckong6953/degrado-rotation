@@ -1,0 +1,10 @@
+NATRO
+ALLAAxc
+USE_INPUT_SC
+start
+
+1 - 16 A NATRO
+28 - 43 B ALLAAxc
+
+
+

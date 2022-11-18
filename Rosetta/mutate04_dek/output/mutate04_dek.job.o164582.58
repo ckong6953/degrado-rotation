@@ -1,0 +1,952 @@
+Thu Nov 17 12:59:08 PST 2022
+qb3-id211
+58
+core.init: Checking for fconfig files in pwd and ./rosetta/flags 
+core.init: Rosetta version: rosetta.source.release-188 r188 2018.33+release.7111c54 7111c54c14ba9a53c012a524f8f1438a8e3fb020 https://www.rosettacommons.org 2018-08-14T01:44:18.723947
+core.init: command: rosetta_scripts.linuxgccrelease -s Re-chained_monomer.pdb -nstruct 1 -parser:protocol design.xml -ignore_zero_occupancy false -out:path:pdb output -out:path:score output -packing:multi_cool_annealer 10 -packing:linmem_ig 10 -run:constant_seed -run:jran 58 -out:suffix mutate04_dek_58 -out:no_nstruct_label
+core.init: Constant seed mode, seed=58 seed_offset=0 real_seed=58
+core.init.random: RandomGenerator:init: Normal mode, seed=58 RG_type=mt19937
+core.init: found database environment variable ROSETTA3_DB: /salilab/diva1/programs/x86_64linux/rosetta-3.10/database
+protocols.jd2.PDBJobInputter: Instantiate PDBJobInputter
+protocols.jd2.PDBJobInputter: PDBJobInputter::fill_jobs
+protocols.jd2.PDBJobInputter: pushed Re-chained_monomer.pdb nstruct index 1
+protocols.evaluation.ChiWellRmsdEvaluatorCreator: Evaluation Creator active ... 
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB Re-chained_monomer.pdb
+core.chemical.GlobalResidueTypeSet: Finished initializing fa_standard residue type set.  Created 617 residue types
+core.chemical.GlobalResidueTypeSet: Total time to initialize 1.53 seconds.
+core.import_pose.import_pose: File 'Re-chained_monomer.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG  on residue GLN 2
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue GLN 2
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OE1 on residue GLN 2
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NE2 on residue GLN 2
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue LYS 18
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CE  on residue LYS 18
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NZ  on residue LYS 18
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue GLN 29
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OE1 on residue GLN 29
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NE2 on residue GLN 29
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue GLY:CtermProteinFull 30
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG  on residue GLN 32
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue GLN 32
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OE1 on residue GLN 32
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NE2 on residue GLN 32
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG  on residue GLN 40
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue GLN 40
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OE1 on residue GLN 40
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NE2 on residue GLN 40
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG  on residue LYS 50
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue LYS 50
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CE  on residue LYS 50
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NZ  on residue LYS 50
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue LYS 51
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CE  on residue LYS 51
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NZ  on residue LYS 51
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG  on residue GLN 55
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue GLN 55
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OE1 on residue GLN 55
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NE2 on residue GLN 55
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG  on residue LYS 57
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue LYS 57
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CE  on residue LYS 57
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NZ  on residue LYS 57
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG1 on residue ILE 59
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG2 on residue ILE 59
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD1 on residue ILE 59
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue ALA:CtermProteinFull 60
+core.pack.pack_missing_sidechains: packing residue number 2 because of missing atom number 6 atom name  CG 
+core.pack.pack_missing_sidechains: packing residue number 18 because of missing atom number 7 atom name  CD 
+core.pack.pack_missing_sidechains: packing residue number 29 because of missing atom number 7 atom name  CD 
+core.pack.pack_missing_sidechains: packing residue number 32 because of missing atom number 6 atom name  CG 
+core.pack.pack_missing_sidechains: packing residue number 40 because of missing atom number 6 atom name  CG 
+core.pack.pack_missing_sidechains: packing residue number 50 because of missing atom number 6 atom name  CG 
+core.pack.pack_missing_sidechains: packing residue number 51 because of missing atom number 7 atom name  CD 
+core.pack.pack_missing_sidechains: packing residue number 55 because of missing atom number 6 atom name  CG 
+core.pack.pack_missing_sidechains: packing residue number 57 because of missing atom number 6 atom name  CG 
+core.pack.pack_missing_sidechains: packing residue number 59 because of missing atom number 6 atom name  CG1
+core.pack.task: Packer task: initialize from command line() 
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+core.scoring.etable: Starting energy table calculation
+core.scoring.etable: smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: Finished calculating energy tables.
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+basic.io.database: Database file opened: scoring/score_functions/rama/fd/all.ramaProb
+basic.io.database: Database file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+core.scoring.P_AA: shapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+basic.io.database: Database file opened: scoring/score_functions/elec_cp_reps.dat
+core.scoring.elec.util: Read 40 countpair representative atoms
+core.pack.dunbrack.RotamerLibrary: shapovalov_lib_fixes_enable option is true.
+core.pack.dunbrack.RotamerLibrary: shapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+core.pack.dunbrack.RotamerLibrary: Binary rotamer library selected: /salilab/diva1/programs/x86_64linux/rosetta-3.10/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+core.pack.dunbrack.RotamerLibrary: Using Dunbrack library binary file '/salilab/diva1/programs/x86_64linux/rosetta-3.10/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+core.pack.dunbrack.RotamerLibrary: Dunbrack 2010 library took 0.38 seconds to load from binary
+core.pack.pack_rotamers: built 177 rotamers at 10 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating LinearMemoryInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 52605 bytes
+protocols.rosetta_scripts.RosettaScriptsParser: dock_design_filename=design.xml
+protocols.rosetta_scripts.RosettaScriptsParser: Generating XML Schema for rosetta_scripts...
+protocols.rosetta_scripts.RosettaScriptsParser: ...done
+protocols.rosetta_scripts.RosettaScriptsParser: Initializing schema validator...
+protocols.rosetta_scripts.RosettaScriptsParser: ...done
+protocols.rosetta_scripts.RosettaScriptsParser: Validating input script...
+protocols.rosetta_scripts.RosettaScriptsParser: ...done
+protocols.rosetta_scripts.RosettaScriptsParser: Parsed script:
+<ROSETTASCRIPTS>
+	<SCOREFXNS>
+		<ScoreFunction name="ref15" symmetric="1" weights="ref2015">
+			<Reweight scoretype="netcharge" weight="1.0"/>
+			<Set netcharge_setup_file="netcharge.charge"/>
+		</ScoreFunction>
+	</SCOREFXNS>
+	<RESIDUE_SELECTORS/>
+	<TASKOPERATIONS>
+		<InitializeFromCommandline name="ifcl"/>
+		<ReadResfile filename="symm_resfile.txt" name="resfile"/>
+		<ExtraRotamersGeneric ex1="1" ex1_sample_level="1" ex2="1" ex2_sample_level="2" extrachi_cutoff="14" name="extrachi"/>
+		<IncludeCurrent name="include_curr"/>
+	</TASKOPERATIONS>
+	<FILTERS>
+		<PackStat confidence="0" name="pstat" repeats="10" threshold="0.4"/>
+		<PackStat name="pstat_mc" repeats="10" threshold="0"/>
+		<NetCharge confidence="0" name="net_charge"/>
+		<ScoreType name="total_score" score_type="total_score" scorefxn="ref15" threshold="0"/>
+	</FILTERS>
+	<MOVERS>
+		<SetupForSymmetry definition="symmdef.txt" name="setup_symm"/>
+		<SymPackRotamersMover name="pack" scorefxn="ref15" task_operations="ifcl,resfile,include_curr,extrachi"/>
+		<SymPackRotamersMover name="pack_fast" scorefxn="ref15" task_operations="ifcl,resfile,include_curr"/>
+		<SymMinMover bb="true" chi="false" max_iter="1000" name="min_bb" scorefxn="ref15" tolerance="0.0000001">
+			<MoveMap name="map_bb">
+				<Span bb="true" begin="1" chi="false" end="63"/>
+				<Span bb="true" begin="69" chi="false" end="130"/>
+			</MoveMap>
+		</SymMinMover>
+		<Idealize name="idealize"/>
+		<SymMinMover bb="false" chi="true" max_iter="1000" name="min_sc" scorefxn="ref15" tolerance="0.0000001">
+			<MoveMap name="map_sc">
+				<Span bb="true" begin="1" chi="false" end="63"/>
+				<Span bb="true" begin="69" chi="false" end="130"/>
+			</MoveMap>
+		</SymMinMover>
+		<SymMinMover bb="true" chi="true" max_iter="1000" name="min_sc_bb" scorefxn="ref15" tolerance="0.0000001">
+			<MoveMap name="map_sc_bb">
+				<Span bb="true" begin="1" chi="false" end="63"/>
+				<Span bb="true" begin="69" chi="false" end="130"/>
+			</MoveMap>
+		</SymMinMover>
+		<ParsedProtocol name="parsed_pack_fast">
+			<Add mover_name="pack"/>
+			<Add mover_name="min_bb"/>
+		</ParsedProtocol>
+		<ParsedProtocol name="parsed_pack">
+			<Add mover_name="pack"/>
+			<Add mover_name="min_bb"/>
+			<Add mover_name="min_sc"/>
+		</ParsedProtocol>
+		<GenericMonteCarlo filter_name="pstat_mc" mover_name="parsed_pack" name="pack_mc" preapply="0" sample_type="high" temperature="0.03" trials="3">
+			<Filters>
+				<AND filter_name="total_score" sample_type="low" temperature="15"/>
+			</Filters>
+		</GenericMonteCarlo>
+		<GenericMonteCarlo filter_name="pstat_mc" mover_name="parsed_pack_fast" name="pack_fast_mc" preapply="0" sample_type="high" temperature="0.03" trials="2">
+			<Filters>
+				<AND filter_name="total_score" sample_type="low" temperature="15"/>
+			</Filters>
+		</GenericMonteCarlo>
+	</MOVERS>
+	<APPLY_TO_POSE/>
+	<PROTOCOLS>
+		<Add mover_name="setup_symm"/>
+		<Add mover_name="parsed_pack_fast"/>
+		<Add mover_name="pack_fast_mc"/>
+		<Add mover_name="pack_mc"/>
+		<Add mover_name="min_sc_bb"/>
+		<Add filter_name="pstat"/>
+		<Add filter_name="net_charge"/>
+		<Add filter_name="total_score"/>
+	</PROTOCOLS>
+	<OUTPUT scorefxn="ref15"/>
+</ROSETTASCRIPTS>
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+core.scoring.etable: Starting energy table calculation
+core.scoring.etable: smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: Finished calculating energy tables.
+basic.io.database: Database file opened: scoring/score_functions/PairEPotential/pdb_pair_stats_fine
+basic.io.database: Database file opened: scoring/score_functions/InterchainPotential/interchain_env_log.txt
+basic.io.database: Database file opened: scoring/score_functions/InterchainPotential/interchain_pair_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/env_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/cbeta_den.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/pair_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/cenpack_log.txt
+core.scoring.ramachandran: shapovalov_lib::shap_rama_smooth_level of 4( aka highest_smooth ) got activated.
+basic.io.database: Database file opened: scoring/score_functions/rama/shapovalov/kappa25/all.ramaProb
+protocols.jd2.parser.ScoreFunctionLoader: defined score function "ref15" with weights "ref2015"
+protocols.jd2.parser.ScoreFunctionLoader:  setting ref15 weight netcharge to 1
+core.scoring.netcharge_energy.NetChargeEnergySetup: Reading netcharge scoring term setup data from netcharge.charge.
+protocols.jd2.parser.ScoreFunctionLoader: symmetrizing ref15
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "ifcl" of type InitializeFromCommandline
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "resfile" of type ReadResfile
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "extrachi" of type ExtraRotamersGeneric
+core.pack.task.operation.TaskOperation: TaskOperation::parse_tag method called with no effect for Tag with type IncludeCurrent. Probably due to (un/mis)implemented virtual method in derived class.
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "include_curr" of type IncludeCurrent
+protocols.filters.PackStatFilter: Structures with packstat score 0.4 will be filtred.
+protocols.rosetta_scripts.RosettaScriptsParser: Defined filter named "pstat" of type PackStat
+protocols.filters.PackStatFilter: Structures with packstat score 0 will be filtred.
+protocols.rosetta_scripts.RosettaScriptsParser: Defined filter named "pstat_mc" of type PackStat
+protocols.simple_filters.NetChargeFilter: Net charge will be caculated for chain 0 with maximum cutoff 100 and minimum cutoff -100.
+protocols.rosetta_scripts.RosettaScriptsParser: Defined filter named "net_charge" of type NetCharge
+protocols.simple_filters.ScoreTypeFilter: ScoreType filter for score_type total_score with threshold 0.
+protocols.rosetta_scripts.RosettaScriptsParser: Defined filter named "total_score" of type ScoreType
+core.conformation.symmetry.SymmData: [ WARNING ] Setting weight of master jump ( jump-id=4 ) to 1.0 (was undefined)
+core.conformation.symmetry.SymmData: [ WARNING ] Setting jump_group JUMPGROUP2: [master 4]  6:0 
+core.conformation.symmetry.SymmData: [ WARNING ] Setting weight of master jump ( jump-id=1 ) to 1.0 (was undefined)
+core.conformation.symmetry.SymmData: [ WARNING ] Setting jump_group JUMPGROUP3: [master 1]  2:0 
+core.conformation.symmetry.SymmData: symmetry name: dek__2
+core.conformation.symmetry.SymmData: number of subunits: 2
+core.conformation.symmetry.SymmData: number of interfaces: 1
+core.conformation.symmetry.SymmData: score subunit number: VRT0
+core.conformation.symmetry.SymmData: anchor the subunits at residue: COM
+core.conformation.symmetry.SymmData:  Virtual coordinate system VRT
+core.conformation.symmetry.SymmData: x: 0 0.596475 0.802632
+core.conformation.symmetry.SymmData: y: 0.917501 0.319233 -0.237237
+core.conformation.symmetry.SymmData: origin: 3.4286 -0.783482 -14.1646
+core.conformation.symmetry.SymmData:  Virtual coordinate system VRT0
+core.conformation.symmetry.SymmData: x: 0.803456 0.567563 0.179806
+core.conformation.symmetry.SymmData: y: 0.44302 -0.36819 -0.817416
+core.conformation.symmetry.SymmData: origin: 3.4286 -1.33075 -14.901
+core.conformation.symmetry.SymmData:  Virtual coordinate system VRT0_base
+core.conformation.symmetry.SymmData: x: 0.803456 0.567563 0.179806
+core.conformation.symmetry.SymmData: y: 0.44302 -0.36819 -0.817416
+core.conformation.symmetry.SymmData: origin: -1.86067 -5.0671 -16.0847
+core.conformation.symmetry.SymmData:  Virtual coordinate system VRT1
+core.conformation.symmetry.SymmData: x: -0.803456 -0.567563 -0.179806
+core.conformation.symmetry.SymmData: y: -0.44302 0.36819 0.817416
+core.conformation.symmetry.SymmData: origin: 3.4286 -1.33075 -14.901
+core.conformation.symmetry.SymmData:  Virtual coordinate system VRT1_base
+core.conformation.symmetry.SymmData: x: -0.803456 -0.567563 -0.179806
+core.conformation.symmetry.SymmData: y: -0.44302 0.36819 0.817416
+core.conformation.symmetry.SymmData: origin: 8.71787 2.4056 -13.7173
+core.conformation.symmetry.SymmData: Dof for jump: 1
+core.conformation.symmetry.SymmData: x 0:0,0:0,0 n2c
+core.conformation.symmetry.SymmData: y 0:0,0:0,0 n2c
+core.conformation.symmetry.SymmData: z 0:0,0:0,0 n2c
+core.conformation.symmetry.SymmData: x_angle 1:0,0:0,0 n2c
+core.conformation.symmetry.SymmData: y_angle 1:0,0:0,0 n2c
+core.conformation.symmetry.SymmData: z_angle 1:0,0:0,0 n2c
+core.conformation.symmetry.SymmData: Dof for jump: 4
+core.conformation.symmetry.SymmData: x 1:6.58315,6.58315:0,0 n2c
+core.conformation.symmetry.SymmData: y 0:0,0:0,0 n2c
+core.conformation.symmetry.SymmData: z 0:0,0:0,0 n2c
+core.conformation.symmetry.SymmData: x_angle 1:0,0:0,0 n2c
+core.conformation.symmetry.SymmData: y_angle 0:0,0:0,0 n2c
+core.conformation.symmetry.SymmData: z_angle 0:0,0:0,0 n2c
+core.conformation.symmetry.SymmData: Jump JUMP0 VRT VRT0
+core.conformation.symmetry.SymmData: Jump JUMP0_to_com VRT0 VRT0_base
+core.conformation.symmetry.SymmData: Jump JUMP0_to_subunit VRT0_base SUBUNIT
+core.conformation.symmetry.SymmData: Jump JUMP1 VRT0 VRT1
+core.conformation.symmetry.SymmData: Jump JUMP1_to_com VRT1 VRT1_base
+core.conformation.symmetry.SymmData: Jump JUMP1_to_subunit VRT1_base SUBUNIT
+core.conformation.symmetry.SymmData: Include subunit:
+core.conformation.symmetry.SymmData: Output subunit:
+core.conformation.symmetry.SymmData: SlideType: RANDOM
+core.conformation.symmetry.SymmData: SlideCriteriaType: CEN_DOCK_SCORE
+core.conformation.symmetry.SymmData: SlideCriteriaVal: AUTOMATIC
+core.conformation.symmetry.SymmData: SlideOrder: none
+protocols.simple_moves.symmetry.SetupForSymmetryMover: [ WARNING ] Symmetry is being set globally, which can cause conflicts with certain protocols, but is necessary for backwards compatibility.
+protocols.simple_moves.symmetry.SetupForSymmetryMover: [ WARNING ] If you are experiencing unexpected behaviour related to symmetry, try setting set_global_symmetry_at_parsetime=0 in <SetupForSymmetry>.
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "setup_symm" of type SetupForSymmetry
+core.pack.task.xml_util: Object pack reading the following task_operations: Adding the following task operations
+ifcl resfile include_curr extrachi 
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "pack" of type SymPackRotamersMover
+core.pack.task.xml_util: Object pack_fast reading the following task_operations: Adding the following task operations
+ifcl resfile include_curr 
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "pack_fast" of type SymPackRotamersMover
+protocols.minimization_packing.MinMover: Options chi, bb: 0, 1 omega: 1
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "min_bb" of type SymMinMover
+protocols.idealize.IdealizeMover: IdealizeMover with atom_pair_constraint_weight=0 coordinate_constraint_weight=0.01 fast=0 chainbreaks=0 and report CA_rmsd_=1 impose constraints 1
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "idealize" of type Idealize
+protocols.minimization_packing.MinMover: Options chi, bb: 1, 0 omega: 1
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "min_sc" of type SymMinMover
+protocols.minimization_packing.MinMover: Options chi, bb: 1, 1 omega: 1
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "min_sc_bb" of type SymMinMover
+protocols.rosetta_scripts.ParsedProtocol: ParsedProtocol mover with the following movers and filters
+protocols.rosetta_scripts.ParsedProtocol: added mover "pack" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "min_bb" with filter "true_filter"
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "parsed_pack_fast" of type ParsedProtocol
+protocols.rosetta_scripts.ParsedProtocol: ParsedProtocol mover with the following movers and filters
+protocols.rosetta_scripts.ParsedProtocol: added mover "pack" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "min_bb" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "min_sc" with filter "true_filter"
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "parsed_pack" of type ParsedProtocol
+protocols.monte_carlo.GenericMonteCarloMover: Pose that have higher score is sampled.
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "pack_mc" of type GenericMonteCarlo
+protocols.monte_carlo.GenericMonteCarloMover: Pose that have higher score is sampled.
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "pack_fast_mc" of type GenericMonteCarlo
+protocols.rosetta_scripts.ParsedProtocol: ParsedProtocol mover with the following movers and filters
+protocols.rosetta_scripts.ParsedProtocol: added mover "setup_symm" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "parsed_pack_fast" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "pack_fast_mc" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "pack_mc" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "min_sc_bb" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "NULL_MOVER" with filter "pstat"
+protocols.rosetta_scripts.ParsedProtocol: added mover "NULL_MOVER" with filter "net_charge"
+protocols.rosetta_scripts.ParsedProtocol: added mover "NULL_MOVER" with filter "total_score"
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from saved copy Re-chained_monomer.pdb
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SetupForSymmetry - setup_symm=======================
+core.conformation.symmetry.util: =================== SYM FOLD TREE, jump notation: =symfixed= *indep* #symdof# jump[=follows] ========================
+VRT(125)----=j5=---->VRT0(121)
+                     |----#j6#---->VRT0_base(122)----#j3#----->46:Sub1B(31-60)31-----*j1*------>1:Sub1A(1-30)
+                     \----=j7=---->VRT1(123)----j8=6---->VRT1_base(124)----j4=3---->106:Sub2B(91-120)91-----j2=1----->61:Sub2A(61-90)
+protocols.simple_moves_symmetry.SymDockingInitialPerturbation: Reading options...
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER ParsedProtocol - parsed_pack_fast=======================
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymPackRotamersMover - pack=======================
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 22152 rotamers at 30 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating SymmLinearMemoryInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 4640344 bytes
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymMinMover - min_bb=======================
+core.select.residue_selector.ResidueSpanSelector: [ WARNING ] Residue span end designation '130' is outside the Pose!
+protocols.rosetta_scripts.ParsedProtocol: setting status to success
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER GenericMonteCarlo - pack_fast_mc=======================
+protocols.monte_carlo.GenericMonteCarloMover: No task inputted
+protocols.monte_carlo.GenericMonteCarloMover: The number of trials for this run is: 2
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 1: packscore: 0.394501
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 2: packscore: 0.423055
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 3: packscore: 0.411473
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 4: packscore: 0.412986
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 5: packscore: 0.421278
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 6: packscore: 0.419302
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 7: packscore: 0.413929
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 8: packscore: 0.468535
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 9: packscore: 0.435666
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 10: packscore: 0.399372
+protocols.monte_carlo.GenericMonteCarloMover: Initialization done 
+protocols.monte_carlo.GenericMonteCarloMover: Trial number: 1
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymPackRotamersMover - pack=======================
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 21280 rotamers at 30 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating SymmLinearMemoryInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 4504088 bytes
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymMinMover - min_bb=======================
+core.select.residue_selector.ResidueSpanSelector: [ WARNING ] Residue span end designation '130' is outside the Pose!
+protocols.rosetta_scripts.ParsedProtocol: setting status to success
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 1: packscore: 0.406913
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 2: packscore: 0.357895
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 3: packscore: 0.364778
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 4: packscore: 0.3486
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 5: packscore: 0.355115
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 6: packscore: 0.361545
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 7: packscore: 0.382029
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 8: packscore: 0.313038
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 9: packscore: 0.374359
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 10: packscore: 0.344602
+protocols.monte_carlo.GenericMonteCarloMover: Filter 1 reports 0.360887 ( best=-0.42001; last=-0.42001 )
+protocols.monte_carlo.GenericMonteCarloMover: Reject
+protocols.monte_carlo.GenericMonteCarloMover: Trial number: 2
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymPackRotamersMover - pack=======================
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 21280 rotamers at 30 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating SymmLinearMemoryInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 4504088 bytes
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymMinMover - min_bb=======================
+core.select.residue_selector.ResidueSpanSelector: [ WARNING ] Residue span end designation '130' is outside the Pose!
+protocols.rosetta_scripts.ParsedProtocol: setting status to success
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 1: packscore: 0.402267
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 2: packscore: 0.446588
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 3: packscore: 0.422349
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 4: packscore: 0.443349
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 5: packscore: 0.456933
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 6: packscore: 0.403265
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 7: packscore: 0.470432
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 8: packscore: 0.406773
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 9: packscore: 0.435302
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 10: packscore: 0.453567
+protocols.monte_carlo.GenericMonteCarloMover: Filter 1 reports 0.434082 ( best=-0.42001; last=-0.42001 )
+protocols.monte_carlo.GenericMonteCarloMover: Filter 2 reports -209.485 ( best=-166.887; last=-166.887 )
+protocols.monte_carlo.GenericMonteCarloMover: Accept
+protocols.monte_carlo.GenericMonteCarloMover: Higher score sampled: trial=    2, score(current/last_accepted/best)=   -0.000/    0.434/    0.434
+protocols.monte_carlo.GenericMonteCarloMover: mover=ParsedProtocol   Score_eval=                 trials=     2;  accepts=  0.500;  energy_gap/trial=    0.007
+protocols.monte_carlo.GenericMonteCarloMover: Number of rejections per filter: 1   0   
+protocols.monte_carlo.GenericMonteCarloMover: Finished MC. Out of 2 1 accepted  and 1 rejected.
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER GenericMonteCarlo - pack_mc=======================
+protocols.monte_carlo.GenericMonteCarloMover: No task inputted
+protocols.monte_carlo.GenericMonteCarloMover: The number of trials for this run is: 3
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 1: packscore: 0.408956
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 2: packscore: 0.455926
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 3: packscore: 0.4371
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 4: packscore: 0.39787
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 5: packscore: 0.435902
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 6: packscore: 0.379102
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 7: packscore: 0.405502
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 8: packscore: 0.394241
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 9: packscore: 0.387948
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 10: packscore: 0.384347
+protocols.monte_carlo.GenericMonteCarloMover: Initialization done 
+protocols.monte_carlo.GenericMonteCarloMover: Trial number: 1
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymPackRotamersMover - pack=======================
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 19977 rotamers at 30 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating SymmLinearMemoryInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 4127808 bytes
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymMinMover - min_bb=======================
+core.select.residue_selector.ResidueSpanSelector: [ WARNING ] Residue span end designation '130' is outside the Pose!
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymMinMover - min_sc=======================
+core.select.residue_selector.ResidueSpanSelector: [ WARNING ] Residue span end designation '130' is outside the Pose!
+protocols.rosetta_scripts.ParsedProtocol: setting status to success
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 1: packscore: 0.371179
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 2: packscore: 0.366768
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 3: packscore: 0.394376
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 4: packscore: 0.436998
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 5: packscore: 0.402214
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 6: packscore: 0.420718
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 7: packscore: 0.399509
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 8: packscore: 0.382321
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 9: packscore: 0.435427
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 10: packscore: 0.400757
+protocols.monte_carlo.GenericMonteCarloMover: Filter 1 reports 0.401027 ( best=-0.408689; last=-0.408689 )
+protocols.monte_carlo.GenericMonteCarloMover: Filter 2 reports -221.816 ( best=-209.485; last=-209.485 )
+protocols.monte_carlo.GenericMonteCarloMover: Accept
+protocols.monte_carlo.GenericMonteCarloMover: Trial number: 2
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymPackRotamersMover - pack=======================
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 19748 rotamers at 30 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating SymmLinearMemoryInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 4082224 bytes
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymMinMover - min_bb=======================
+core.select.residue_selector.ResidueSpanSelector: [ WARNING ] Residue span end designation '130' is outside the Pose!
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymMinMover - min_sc=======================
+core.select.residue_selector.ResidueSpanSelector: [ WARNING ] Residue span end designation '130' is outside the Pose!
+protocols.rosetta_scripts.ParsedProtocol: setting status to success
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 1: packscore: 0.440089
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 2: packscore: 0.41749
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 3: packscore: 0.375589
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 4: packscore: 0.400996
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 5: packscore: 0.428078
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 6: packscore: 0.412426
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 7: packscore: 0.414072
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 8: packscore: 0.418886
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 9: packscore: 0.41252
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 10: packscore: 0.385168
+protocols.monte_carlo.GenericMonteCarloMover: Filter 1 reports 0.410531 ( best=-0.408689; last=-0.401027 )
+protocols.monte_carlo.GenericMonteCarloMover: Filter 2 reports -209.37 ( best=-209.485; last=-221.816 )
+protocols.monte_carlo.GenericMonteCarloMover: Accept
+protocols.monte_carlo.GenericMonteCarloMover: Trial number: 3
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymPackRotamersMover - pack=======================
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 19389 rotamers at 30 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating SymmLinearMemoryInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 4032216 bytes
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymMinMover - min_bb=======================
+core.select.residue_selector.ResidueSpanSelector: [ WARNING ] Residue span end designation '130' is outside the Pose!
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymMinMover - min_sc=======================
+core.select.residue_selector.ResidueSpanSelector: [ WARNING ] Residue span end designation '130' is outside the Pose!
+protocols.rosetta_scripts.ParsedProtocol: setting status to success
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 1: packscore: 0.352558
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 2: packscore: 0.357405
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 3: packscore: 0.384768
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 4: packscore: 0.391281
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 5: packscore: 0.384506
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 6: packscore: 0.340335
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 7: packscore: 0.417437
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 8: packscore: 0.380637
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 9: packscore: 0.40441
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 10: packscore: 0.366474
+protocols.monte_carlo.GenericMonteCarloMover: Filter 1 reports 0.377981 ( best=-0.410531; last=-0.410531 )
+protocols.monte_carlo.GenericMonteCarloMover: Reject
+protocols.monte_carlo.GenericMonteCarloMover: Higher score sampled: trial=    3, score(current/last_accepted/best)=   -0.000/    0.411/    0.411
+protocols.monte_carlo.GenericMonteCarloMover: mover=ParsedProtocol   Score_eval=                 trials=     3;  accepts=  0.667;  energy_gap/trial=    0.001
+protocols.monte_carlo.GenericMonteCarloMover: Number of rejections per filter: 1   0   
+protocols.monte_carlo.GenericMonteCarloMover: Finished MC. Out of 3 2 accepted  and 1 rejected.
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SymMinMover - min_sc_bb=======================
+core.select.residue_selector.ResidueSpanSelector: [ WARNING ] Residue span end designation '130' is outside the Pose!
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN FILTER pstat=======================
+protocols.rosetta_scripts.ParsedProtocol: =======================END FILTER pstat=======================
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN FILTER net_charge=======================
+protocols.rosetta_scripts.ParsedProtocol: =======================END FILTER net_charge=======================
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN FILTER total_score=======================
+protocols.simple_filters.ScoreTypeFilter: score total_score is -209.37. passing.
+protocols.rosetta_scripts.ParsedProtocol: =======================END FILTER total_score=======================
+protocols.rosetta_scripts.ParsedProtocol: setting status to success
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 1: packscore: 0.392928
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 2: packscore: 0.435916
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 3: packscore: 0.420397
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 4: packscore: 0.395847
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 5: packscore: 0.402468
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 6: packscore: 0.415235
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 7: packscore: 0.422089
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 8: packscore: 0.418868
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 9: packscore: 0.399813
+protocols.packstat.SimplePDB: ignoring unknown atom types:
+protocols.packstat.SimplePDB: (X,XXX), 
+protocols.filters.PackStatFilter: repeat 10: packscore: 0.418203
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 4
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 6
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 7
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 11
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 13
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 18
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 20
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 21
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 25
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 33
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 36
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 37
+protocols.simple_filters.NetChargeFilter: AA:  -1  ASP 41
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 42
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 43
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 47
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 50
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 54
+protocols.simple_filters.NetChargeFilter: AA:  -1  ASP 60
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 64
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 66
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 67
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 71
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 73
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 78
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 80
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 81
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 85
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 93
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 96
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 97
+protocols.simple_filters.NetChargeFilter: AA:  -1  ASP 101
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 102
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 103
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 107
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 110
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 114
+protocols.simple_filters.NetChargeFilter: AA:  -1  ASP 120
+protocols.simple_filters.NetChargeFilter: The net charge is: -2
+protocols.rosetta_scripts.ParsedProtocol.REPORT: ============Begin report for pstat==================
+protocols.rosetta_scripts.ParsedProtocol.REPORT: ============End report for pstat==================
+protocols.rosetta_scripts.ParsedProtocol.REPORT: ============Begin report for net_charge==================
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 4
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 6
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 7
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 11
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 13
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 18
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 20
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 21
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 25
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 33
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 36
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 37
+protocols.simple_filters.NetChargeFilter: AA:  -1  ASP 41
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 42
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 43
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 47
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 50
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 54
+protocols.simple_filters.NetChargeFilter: AA:  -1  ASP 60
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 64
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 66
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 67
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 71
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 73
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 78
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 80
+protocols.simple_filters.NetChargeFilter: AA:  +1  ARG 81
+protocols.simple_filters.NetChargeFilter: AA:  +1  LYS 85
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 93
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 96
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 97
+protocols.simple_filters.NetChargeFilter: AA:  -1  ASP 101
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 102
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 103
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 107
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 110
+protocols.simple_filters.NetChargeFilter: AA:  -1  GLU 114
+protocols.simple_filters.NetChargeFilter: AA:  -1  ASP 120
+protocols.simple_filters.NetChargeFilter: The net charge is: -2
+protocols.rosetta_scripts.ParsedProtocol.REPORT: Net Charge: -2
+============End report for net_charge==================
+protocols.rosetta_scripts.ParsedProtocol.REPORT: ============Begin report for total_score==================
+protocols.rosetta_scripts.ParsedProtocol.REPORT: Weighted score of total_score -209.37
+============End report for total_score==================
+protocols.jd2.JobDistributor: Re-chained_monomermutate04_dek_58 reported success in 1194 seconds
+protocols.jd2.JobDistributor: no more batches to process... 
+protocols.jd2.JobDistributor: 1 jobs considered, 1 jobs attempted in 1194 seconds
+==============================================================
+job_number:                 164582
+exec_file:                  job_scripts/164582
+submission_time:            Thu Nov 17 12:57:28 2022
+owner:                      c-kong
+uid:                        62185
+group:                      wynton-rotation
+gid:                        60001
+sge_o_home:                 /wynton/home/rotation/c-kong
+sge_o_log_name:             c-kong
+sge_o_path:                 /opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/wynton/home/rotation/c-kong/.local/bin:/wynton/home/rotation/c-kong/bin
+sge_o_shell:                /bin/bash
+sge_o_workdir:              /wynton/home/rotation/c-kong/Rosetta/mutate04_dek
+sge_o_host:                 dev2
+account:                    sge
+cwd:                        /wynton/home/rotation/c-kong/Rosetta/mutate04_dek
+stderr_path_list:           NONE:NONE:/wynton/home/rotation/c-kong/Rosetta/mutate04_dek/output
+merge:                      y
+hard resource_list:         h_rt=7200,mem_free=3G
+mail_list:                  c-kong@dev2.wynton.ucsf.edu
+notify:                     FALSE
+job_name:                   mutate04_dek.job
+stdout_path_list:           NONE:NONE:/wynton/home/rotation/c-kong/Rosetta/mutate04_dek/output
+jobshare:                   0
+hard_queue_list:            !*gpu.q
+restart:                    y
+shell_list:                 NONE:/bin/bash
+env_list:                   TERM=NONE
+script_file:                mutate04_dek.job
+project:                    wynton-rotation
+job-array tasks:            1-100:1
+binding:                    NONE
+job_type:                   NONE
+usage         1:            cpu=00:11:55, mem=756.59222 GB s, io=0.14037 GB, vmem=1.098G, maxvmem=1.098G
+usage         2:            cpu=00:11:40, mem=748.56083 GB s, io=0.14078 GB, vmem=1.098G, maxvmem=1.098G
+usage         3:            cpu=00:12:26, mem=786.17603 GB s, io=0.14016 GB, vmem=1.098G, maxvmem=1.098G
+usage         4:            cpu=00:12:54, mem=825.28026 GB s, io=0.14005 GB, vmem=1.101G, maxvmem=1.101G
+usage         6:            cpu=00:12:26, mem=797.35623 GB s, io=0.14029 GB, vmem=1.101G, maxvmem=1.101G
+usage         7:            cpu=00:12:36, mem=805.67910 GB s, io=0.14007 GB, vmem=1.101G, maxvmem=1.101G
+usage         8:            cpu=00:12:33, mem=801.68420 GB s, io=0.14035 GB, vmem=1.098G, maxvmem=1.098G
+usage         9:            cpu=00:13:24, mem=859.75026 GB s, io=0.14032 GB, vmem=1.101G, maxvmem=1.101G
+usage        10:            cpu=00:12:26, mem=792.08538 GB s, io=0.14047 GB, vmem=1.098G, maxvmem=1.098G
+usage        11:            cpu=00:12:02, mem=768.21492 GB s, io=0.14050 GB, vmem=1.101G, maxvmem=1.101G
+usage        12:            cpu=00:12:02, mem=792.78662 GB s, io=0.14077 GB, vmem=1.162G, maxvmem=1.162G
+usage        13:            cpu=00:13:15, mem=848.09151 GB s, io=0.14028 GB, vmem=1.098G, maxvmem=1.098G
+usage        14:            cpu=00:12:27, mem=786.73883 GB s, io=0.14016 GB, vmem=1.098G, maxvmem=1.098G
+usage        15:            cpu=00:12:47, mem=811.15559 GB s, io=0.13997 GB, vmem=1.101G, maxvmem=1.101G
+usage        16:            cpu=00:12:50, mem=813.76685 GB s, io=0.14016 GB, vmem=1.101G, maxvmem=1.101G
+usage        17:            cpu=00:12:15, mem=775.68203 GB s, io=0.13996 GB, vmem=1.101G, maxvmem=1.101G
+usage        18:            cpu=00:12:31, mem=794.30586 GB s, io=0.14016 GB, vmem=1.101G, maxvmem=1.101G
+usage        19:            cpu=00:12:22, mem=781.48922 GB s, io=0.13981 GB, vmem=1.098G, maxvmem=1.098G
+usage        20:            cpu=00:12:55, mem=818.30526 GB s, io=0.13994 GB, vmem=1.098G, maxvmem=1.098G
+usage        21:            cpu=00:13:08, mem=833.23768 GB s, io=0.13991 GB, vmem=1.101G, maxvmem=1.101G
+usage        22:            cpu=00:12:35, mem=795.92782 GB s, io=0.13996 GB, vmem=1.098G, maxvmem=1.098G
+usage        23:            cpu=00:12:23, mem=784.41209 GB s, io=0.13999 GB, vmem=1.101G, maxvmem=1.101G
+usage        24:            cpu=00:12:37, mem=799.24530 GB s, io=0.14004 GB, vmem=1.122G, maxvmem=1.122G
+usage        25:            cpu=00:12:39, mem=799.19991 GB s, io=0.13999 GB, vmem=1.098G, maxvmem=1.098G
+usage        26:            cpu=00:13:10, mem=834.59175 GB s, io=0.13996 GB, vmem=1.098G, maxvmem=1.098G
+usage        27:            cpu=00:12:32, mem=795.22147 GB s, io=0.14005 GB, vmem=1.112G, maxvmem=1.112G
+usage        28:            cpu=00:12:20, mem=793.32986 GB s, io=0.14042 GB, vmem=1.098G, maxvmem=1.098G
+usage        29:            cpu=00:15:59, mem=1030.82850 GB s, io=0.14020 GB, vmem=1.101G, maxvmem=1.101G
+usage        30:            cpu=00:11:42, mem=751.25277 GB s, io=0.14079 GB, vmem=1.110G, maxvmem=1.110G
+usage        32:            cpu=00:15:50, mem=1018.19699 GB s, io=0.14042 GB, vmem=1.098G, maxvmem=1.098G
+usage        33:            cpu=00:12:41, mem=811.02799 GB s, io=0.14032 GB, vmem=1.101G, maxvmem=1.101G
+usage        34:            cpu=00:12:18, mem=777.95212 GB s, io=0.14016 GB, vmem=1.098G, maxvmem=1.098G
+usage        35:            cpu=00:12:22, mem=782.31913 GB s, io=0.14016 GB, vmem=1.101G, maxvmem=1.101G
+usage        37:            cpu=00:11:47, mem=756.29668 GB s, io=0.14079 GB, vmem=1.098G, maxvmem=1.098G
+usage        38:            cpu=00:12:41, mem=811.51777 GB s, io=0.14042 GB, vmem=1.101G, maxvmem=1.101G
+usage        42:            cpu=00:12:18, mem=785.82718 GB s, io=0.14045 GB, vmem=1.098G, maxvmem=1.098G
+usage        43:            cpu=00:12:14, mem=782.37694 GB s, io=0.14034 GB, vmem=1.101G, maxvmem=1.101G
+usage        44:            cpu=00:12:06, mem=777.13693 GB s, io=0.14078 GB, vmem=1.098G, maxvmem=1.098G
+usage        45:            cpu=00:11:55, mem=765.10570 GB s, io=0.14078 GB, vmem=1.098G, maxvmem=1.098G
+usage        46:            cpu=00:12:54, mem=818.47759 GB s, io=0.13993 GB, vmem=1.101G, maxvmem=1.101G
+usage        47:            cpu=00:12:09, mem=777.02936 GB s, io=0.14043 GB, vmem=1.098G, maxvmem=1.098G
+usage        49:            cpu=00:15:31, mem=998.84503 GB s, io=0.14041 GB, vmem=1.098G, maxvmem=1.098G
+usage        50:            cpu=00:13:17, mem=849.79992 GB s, io=0.14036 GB, vmem=1.098G, maxvmem=1.098G
+usage        51:            cpu=00:12:12, mem=782.16579 GB s, io=0.14049 GB, vmem=1.101G, maxvmem=1.101G
+usage        52:            cpu=00:12:10, mem=778.36185 GB s, io=0.14043 GB, vmem=1.098G, maxvmem=1.098G
+usage        53:            cpu=00:12:13, mem=785.52775 GB s, io=0.14090 GB, vmem=1.098G, maxvmem=1.098G
+usage        54:            cpu=00:11:50, mem=759.82996 GB s, io=0.14100 GB, vmem=1.098G, maxvmem=1.098G
+usage        55:            cpu=00:12:27, mem=795.52366 GB s, io=0.14040 GB, vmem=1.098G, maxvmem=1.098G
+usage        56:            cpu=00:12:53, mem=824.16177 GB s, io=0.14031 GB, vmem=1.101G, maxvmem=1.101G
+usage        57:            cpu=00:15:44, mem=1005.28214 GB s, io=0.14020 GB, vmem=1.101G, maxvmem=1.101G
+usage        58:            cpu=00:14:36, mem=941.70143 GB s, io=0.14069 GB, vmem=1.098G, maxvmem=1.098G
+usage        59:            cpu=00:12:08, mem=778.37374 GB s, io=0.14066 GB, vmem=1.098G, maxvmem=1.098G
+usage        60:            cpu=00:12:17, mem=789.02064 GB s, io=0.14105 GB, vmem=1.098G, maxvmem=1.098G
+usage        61:            cpu=00:14:39, mem=941.69169 GB s, io=0.14055 GB, vmem=1.098G, maxvmem=1.098G
+usage        62:            cpu=00:11:58, mem=768.18730 GB s, io=0.14208 GB, vmem=1.098G, maxvmem=1.098G
+usage        63:            cpu=00:15:36, mem=1004.44874 GB s, io=0.14019 GB, vmem=1.101G, maxvmem=1.101G
+usage        65:            cpu=00:12:27, mem=789.88087 GB s, io=0.13999 GB, vmem=1.101G, maxvmem=1.101G
+usage        66:            cpu=00:13:28, mem=862.88313 GB s, io=0.14053 GB, vmem=1.098G, maxvmem=1.098G
+usage        67:            cpu=00:12:52, mem=822.73076 GB s, io=0.14049 GB, vmem=1.101G, maxvmem=1.101G
+usage        69:            cpu=00:15:04, mem=968.15420 GB s, io=0.14043 GB, vmem=1.098G, maxvmem=1.098G
+usage        70:            cpu=00:15:01, mem=965.13058 GB s, io=0.14042 GB, vmem=1.098G, maxvmem=1.098G
+usage        71:            cpu=00:12:07, mem=773.54607 GB s, io=0.14041 GB, vmem=1.098G, maxvmem=1.098G
+usage        72:            cpu=00:12:19, mem=786.86701 GB s, io=0.14042 GB, vmem=1.098G, maxvmem=1.098G
+usage        73:            cpu=00:14:05, mem=903.91977 GB s, io=0.14045 GB, vmem=1.100G, maxvmem=1.100G
+usage        74:            cpu=00:13:01, mem=834.88542 GB s, io=0.14031 GB, vmem=1.101G, maxvmem=1.101G
+usage        75:            cpu=00:12:10, mem=769.24127 GB s, io=0.14004 GB, vmem=1.101G, maxvmem=1.101G
+usage        76:            cpu=00:12:16, mem=785.88143 GB s, io=0.14042 GB, vmem=1.101G, maxvmem=1.101G
+usage        77:            cpu=00:11:51, mem=761.25208 GB s, io=0.13970 GB, vmem=1.098G, maxvmem=1.098G
+usage        78:            cpu=00:12:02, mem=772.28245 GB s, io=0.14100 GB, vmem=1.098G, maxvmem=1.098G
+usage        79:            cpu=00:12:14, mem=812.84065 GB s, io=0.14080 GB, vmem=1.168G, maxvmem=1.168G
+usage        81:            cpu=00:12:16, mem=784.51613 GB s, io=0.14042 GB, vmem=1.101G, maxvmem=1.101G
+usage        82:            cpu=00:12:23, mem=793.88464 GB s, io=0.14038 GB, vmem=1.101G, maxvmem=1.101G
+usage        83:            cpu=00:12:17, mem=787.35715 GB s, io=0.14042 GB, vmem=1.101G, maxvmem=1.101G
+usage        84:            cpu=00:12:14, mem=784.15833 GB s, io=0.14046 GB, vmem=1.101G, maxvmem=1.101G
+usage        85:            cpu=00:11:53, mem=764.84813 GB s, io=0.14031 GB, vmem=1.130G, maxvmem=1.130G
+usage        86:            cpu=00:12:23, mem=797.65957 GB s, io=0.14079 GB, vmem=1.106G, maxvmem=1.106G
+usage        87:            cpu=00:12:30, mem=802.75804 GB s, io=0.14067 GB, vmem=1.098G, maxvmem=1.098G
+usage        88:            cpu=00:12:20, mem=789.35020 GB s, io=0.14024 GB, vmem=1.101G, maxvmem=1.101G
+usage        89:            cpu=00:12:13, mem=781.76026 GB s, io=0.14042 GB, vmem=1.101G, maxvmem=1.101G
+usage        90:            cpu=00:11:50, mem=756.47305 GB s, io=0.14049 GB, vmem=1.098G, maxvmem=1.098G
+usage        93:            cpu=00:12:22, mem=791.47412 GB s, io=0.14049 GB, vmem=1.098G, maxvmem=1.098G
+usage        94:            cpu=00:15:53, mem=1020.55581 GB s, io=0.14002 GB, vmem=1.098G, maxvmem=1.098G
+usage        95:            cpu=00:12:09, mem=778.46179 GB s, io=0.14042 GB, vmem=1.101G, maxvmem=1.101G
+usage        96:            cpu=00:12:15, mem=783.54883 GB s, io=0.14037 GB, vmem=1.101G, maxvmem=1.101G
+usage        97:            cpu=00:12:19, mem=778.92173 GB s, io=0.14004 GB, vmem=1.098G, maxvmem=1.098G
+usage        98:            cpu=00:12:07, mem=774.22807 GB s, io=0.14034 GB, vmem=1.101G, maxvmem=1.101G
+usage        99:            cpu=00:15:37, mem=994.38852 GB s, io=0.13996 GB, vmem=1.098G, maxvmem=1.098G
+binding       1:            NONE
+binding       2:            NONE
+binding       3:            NONE
+binding       4:            NONE
+binding       6:            NONE
+binding       7:            NONE
+binding       8:            NONE
+binding       9:            NONE
+binding      10:            NONE
+binding      11:            NONE
+binding      12:            NONE
+binding      13:            NONE
+binding      14:            NONE
+binding      15:            NONE
+binding      16:            NONE
+binding      17:            NONE
+binding      18:            NONE
+binding      19:            NONE
+binding      20:            NONE
+binding      21:            NONE
+binding      22:            NONE
+binding      23:            NONE
+binding      24:            NONE
+binding      25:            NONE
+binding      26:            NONE
+binding      27:            NONE
+binding      28:            NONE
+binding      29:            NONE
+binding      30:            NONE
+binding      32:            NONE
+binding      33:            NONE
+binding      34:            NONE
+binding      35:            NONE
+binding      37:            NONE
+binding      38:            NONE
+binding      42:            NONE
+binding      43:            NONE
+binding      44:            NONE
+binding      45:            NONE
+binding      46:            NONE
+binding      47:            NONE
+binding      49:            NONE
+binding      50:            NONE
+binding      51:            NONE
+binding      52:            NONE
+binding      53:            NONE
+binding      54:            NONE
+binding      55:            NONE
+binding      56:            NONE
+binding      57:            NONE
+binding      58:            NONE
+binding      59:            NONE
+binding      60:            NONE
+binding      61:            NONE
+binding      62:            NONE
+binding      63:            NONE
+binding      65:            NONE
+binding      66:            NONE
+binding      67:            NONE
+binding      69:            NONE
+binding      70:            NONE
+binding      71:            NONE
+binding      72:            NONE
+binding      73:            NONE
+binding      74:            NONE
+binding      75:            NONE
+binding      76:            NONE
+binding      77:            NONE
+binding      78:            NONE
+binding      79:            NONE
+binding      81:            NONE
+binding      82:            NONE
+binding      83:            NONE
+binding      84:            NONE
+binding      85:            NONE
+binding      86:            NONE
+binding      87:            NONE
+binding      88:            NONE
+binding      89:            NONE
+binding      90:            NONE
+binding      93:            NONE
+binding      94:            NONE
+binding      95:            NONE
+binding      96:            NONE
+binding      97:            NONE
+binding      98:            NONE
+binding      99:            NONE
+scheduling info:            (Collecting of scheduler job information is turned off)

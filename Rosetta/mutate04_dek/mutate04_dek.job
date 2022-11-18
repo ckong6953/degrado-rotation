@@ -1,0 +1,45 @@
+#!/bin/bash
+
+#export TMPDIR=/scratch
+#export MYTMP=`mktemp -d`
+#cd $MYTMP
+
+module load Sali
+module load rosetta/3.10
+
+#$ -S /bin/bash
+#$ -o /wynton/home/rotation/c-kong/Rosetta/mutate04_dek/output
+#$ -e /wynton/home/rotation/c-kong/Rosetta/mutate04_dek/output
+#$ -cwd
+#$ -r y
+#$ -j y
+#$ -l mem_free=3G
+##$ -l arch=linux-x64
+##$ -l netapp=25G
+#$ -l h_rt=02:00:00
+#$ -t 1-100
+
+# Anything under here can be a bash script
+
+# If you used the -t option above, this same script will be run for each task,
+# but with $SGE_TASK_ID set to a different value each time (1-10 in this case).
+# The commands below are one way to select a different input (PDB codes in
+# this example) for each task.  Note that the bash arrays are indexed from 0,
+# while task IDs start at 1, so the first entry in the tasks array variable
+# is simply a placeholder
+
+##tasks=(/netapp/home/smann2/taml/no_hbond_constraints/round1a/cm_options_rscript.txt)
+options="$SGE_TASK_ID"                                                                                                                                       
+
+date
+hostname
+
+echo $options
+rosetta_scripts.linuxgccrelease -s Re-chained_monomer.pdb -nstruct 1 -parser:protocol design.xml -ignore_zero_occupancy false -out:path:pdb output -out:path:score output -packing:multi_cool_annealer 10 -packing:linmem_ig 10 -run:constant_seed -run:jran $SGE_TASK_ID -out:suffix mutate04_dek_$SGE_TASK_ID -out:no_nstruct_label
+qstat -j $JOB_ID                                  # This is useful for debugging and usage purposes,
+                                                  # e.g. "did my job exceed its memory request?"
+
+# to submit this job file on the cluster, type ‘qsub example_cluster_submission.job’ on the command line.
+# to check the status of a job, type ‘qstat’
+# to kill a specific job, find the job number with qstat, then: ‘qdel job_number’ where job_number is the actual job number. 
+# Note the -o and -e directories need to exist before you submit the job to the cluster.

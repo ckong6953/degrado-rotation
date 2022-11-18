@@ -1,0 +1,457 @@
+Thu Nov 17 12:59:54 PST 2022
+qb3-ad1
+41
+core.init: Checking for fconfig files in pwd and ./rosetta/flags 
+core.init: Rosetta version: rosetta.source.release-188 r188 2018.33+release.7111c54 7111c54c14ba9a53c012a524f8f1438a8e3fb020 https://www.rosettacommons.org 2018-08-14T01:44:18.723947
+core.init: command: rosetta_scripts.linuxgccrelease -s Re-chained_monomer.pdb -nstruct 1 -parser:protocol design.xml -ignore_zero_occupancy false -out:path:pdb output -out:path:score output -packing:multi_cool_annealer 10 -packing:linmem_ig 10 -run:constant_seed -run:jran 41 -out:suffix mutate04_dek_41 -out:no_nstruct_label
+core.init: Constant seed mode, seed=41 seed_offset=0 real_seed=41
+core.init.random: RandomGenerator:init: Normal mode, seed=41 RG_type=mt19937
+core.init: found database environment variable ROSETTA3_DB: /salilab/diva1/programs/x86_64linux/rosetta-3.10/database
+protocols.jd2.PDBJobInputter: Instantiate PDBJobInputter
+protocols.jd2.PDBJobInputter: PDBJobInputter::fill_jobs
+protocols.jd2.PDBJobInputter: pushed Re-chained_monomer.pdb nstruct index 1
+protocols.evaluation.ChiWellRmsdEvaluatorCreator: Evaluation Creator active ... 
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB Re-chained_monomer.pdb
+core.chemical.GlobalResidueTypeSet: Finished initializing fa_standard residue type set.  Created 617 residue types
+core.chemical.GlobalResidueTypeSet: Total time to initialize 3.16 seconds.
+core.import_pose.import_pose: File 'Re-chained_monomer.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG  on residue GLN 2
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue GLN 2
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OE1 on residue GLN 2
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NE2 on residue GLN 2
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue LYS 18
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CE  on residue LYS 18
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NZ  on residue LYS 18
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue GLN 29
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OE1 on residue GLN 29
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NE2 on residue GLN 29
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue GLY:CtermProteinFull 30
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG  on residue GLN 32
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue GLN 32
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OE1 on residue GLN 32
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NE2 on residue GLN 32
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG  on residue GLN 40
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue GLN 40
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OE1 on residue GLN 40
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NE2 on residue GLN 40
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG  on residue LYS 50
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue LYS 50
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CE  on residue LYS 50
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NZ  on residue LYS 50
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue LYS 51
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CE  on residue LYS 51
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NZ  on residue LYS 51
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG  on residue GLN 55
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue GLN 55
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OE1 on residue GLN 55
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NE2 on residue GLN 55
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG  on residue LYS 57
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD  on residue LYS 57
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CE  on residue LYS 57
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  NZ  on residue LYS 57
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG1 on residue ILE 59
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CG2 on residue ILE 59
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  CD1 on residue ILE 59
+core.conformation.Conformation: [ WARNING ] missing heavyatom:  OXT on residue ALA:CtermProteinFull 60
+core.pack.pack_missing_sidechains: packing residue number 2 because of missing atom number 6 atom name  CG 
+core.pack.pack_missing_sidechains: packing residue number 18 because of missing atom number 7 atom name  CD 
+core.pack.pack_missing_sidechains: packing residue number 29 because of missing atom number 7 atom name  CD 
+core.pack.pack_missing_sidechains: packing residue number 32 because of missing atom number 6 atom name  CG 
+core.pack.pack_missing_sidechains: packing residue number 40 because of missing atom number 6 atom name  CG 
+core.pack.pack_missing_sidechains: packing residue number 50 because of missing atom number 6 atom name  CG 
+core.pack.pack_missing_sidechains: packing residue number 51 because of missing atom number 7 atom name  CD 
+core.pack.pack_missing_sidechains: packing residue number 55 because of missing atom number 6 atom name  CG 
+core.pack.pack_missing_sidechains: packing residue number 57 because of missing atom number 6 atom name  CG 
+core.pack.pack_missing_sidechains: packing residue number 59 because of missing atom number 6 atom name  CG1
+core.pack.task: Packer task: initialize from command line() 
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+core.scoring.etable: Starting energy table calculation
+core.scoring.etable: smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: Finished calculating energy tables.
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+basic.io.database: Database file opened: scoring/score_functions/rama/fd/all.ramaProb
+basic.io.database: Database file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+core.scoring.P_AA: shapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+basic.io.database: Database file opened: scoring/score_functions/elec_cp_reps.dat
+core.scoring.elec.util: Read 40 countpair representative atoms
+core.pack.dunbrack.RotamerLibrary: shapovalov_lib_fixes_enable option is true.
+core.pack.dunbrack.RotamerLibrary: shapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+core.pack.dunbrack.RotamerLibrary: Binary rotamer library selected: /salilab/diva1/programs/x86_64linux/rosetta-3.10/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+core.pack.dunbrack.RotamerLibrary: Using Dunbrack library binary file '/salilab/diva1/programs/x86_64linux/rosetta-3.10/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+core.pack.dunbrack.RotamerLibrary: Dunbrack 2010 library took 0.86 seconds to load from binary
+core.pack.pack_rotamers: built 177 rotamers at 10 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating LinearMemoryInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 52605 bytes
+protocols.rosetta_scripts.RosettaScriptsParser: dock_design_filename=design.xml
+protocols.rosetta_scripts.RosettaScriptsParser: Generating XML Schema for rosetta_scripts...
+protocols.rosetta_scripts.RosettaScriptsParser: ...done
+protocols.rosetta_scripts.RosettaScriptsParser: Initializing schema validator...
+protocols.rosetta_scripts.RosettaScriptsParser: ...done
+protocols.rosetta_scripts.RosettaScriptsParser: Validating input script...
+protocols.rosetta_scripts.RosettaScriptsParser: ...done
+protocols.rosetta_scripts.RosettaScriptsParser: Parsed script:
+<ROSETTASCRIPTS>
+	<SCOREFXNS>
+		<ScoreFunction name="ref15" symmetric="1" weights="ref2015">
+			<Reweight scoretype="netcharge" weight="1.0"/>
+			<Set netcharge_setup_file="netcharge.charge"/>
+		</ScoreFunction>
+	</SCOREFXNS>
+	<RESIDUE_SELECTORS/>
+	<TASKOPERATIONS>
+		<InitializeFromCommandline name="ifcl"/>
+		<ReadResfile filename="symm_resfile.txt" name="resfile"/>
+		<ExtraRotamersGeneric ex1="1" ex1_sample_level="1" ex2="1" ex2_sample_level="2" extrachi_cutoff="14" name="extrachi"/>
+		<IncludeCurrent name="include_curr"/>
+	</TASKOPERATIONS>
+	<FILTERS>
+		<PackStat confidence="0" name="pstat" repeats="10" threshold="0.4"/>
+		<PackStat name="pstat_mc" repeats="10" threshold="0"/>
+		<NetCharge confidence="0" name="net_charge"/>
+		<ScoreType name="total_score" score_type="total_score" scorefxn="ref15" threshold="0"/>
+	</FILTERS>
+	<MOVERS>
+		<SetupForSymmetry definition="symmdef.txt" name="setup_symm"/>
+		<SymPackRotamersMover name="pack" scorefxn="ref15" task_operations="ifcl,resfile,include_curr,extrachi"/>
+		<SymPackRotamersMover name="pack_fast" scorefxn="ref15" task_operations="ifcl,resfile,include_curr"/>
+		<SymMinMover bb="true" chi="false" max_iter="1000" name="min_bb" scorefxn="ref15" tolerance="0.0000001">
+			<MoveMap name="map_bb">
+				<Span bb="true" begin="1" chi="false" end="63"/>
+				<Span bb="true" begin="69" chi="false" end="130"/>
+			</MoveMap>
+		</SymMinMover>
+		<Idealize name="idealize"/>
+		<SymMinMover bb="false" chi="true" max_iter="1000" name="min_sc" scorefxn="ref15" tolerance="0.0000001">
+			<MoveMap name="map_sc">
+				<Span bb="true" begin="1" chi="false" end="63"/>
+				<Span bb="true" begin="69" chi="false" end="130"/>
+			</MoveMap>
+		</SymMinMover>
+		<SymMinMover bb="true" chi="true" max_iter="1000" name="min_sc_bb" scorefxn="ref15" tolerance="0.0000001">
+			<MoveMap name="map_sc_bb">
+				<Span bb="true" begin="1" chi="false" end="63"/>
+				<Span bb="true" begin="69" chi="false" end="130"/>
+			</MoveMap>
+		</SymMinMover>
+		<ParsedProtocol name="parsed_pack_fast">
+			<Add mover_name="pack"/>
+			<Add mover_name="min_bb"/>
+		</ParsedProtocol>
+		<ParsedProtocol name="parsed_pack">
+			<Add mover_name="pack"/>
+			<Add mover_name="min_bb"/>
+			<Add mover_name="min_sc"/>
+		</ParsedProtocol>
+		<GenericMonteCarlo filter_name="pstat_mc" mover_name="parsed_pack" name="pack_mc" preapply="0" sample_type="high" temperature="0.03" trials="3">
+			<Filters>
+				<AND filter_name="total_score" sample_type="low" temperature="15"/>
+			</Filters>
+		</GenericMonteCarlo>
+		<GenericMonteCarlo filter_name="pstat_mc" mover_name="parsed_pack_fast" name="pack_fast_mc" preapply="0" sample_type="high" temperature="0.03" trials="2">
+			<Filters>
+				<AND filter_name="total_score" sample_type="low" temperature="15"/>
+			</Filters>
+		</GenericMonteCarlo>
+	</MOVERS>
+	<APPLY_TO_POSE/>
+	<PROTOCOLS>
+		<Add mover_name="setup_symm"/>
+		<Add mover_name="parsed_pack_fast"/>
+		<Add mover_name="pack_fast_mc"/>
+		<Add mover_name="pack_mc"/>
+		<Add mover_name="min_sc_bb"/>
+		<Add filter_name="pstat"/>
+		<Add filter_name="net_charge"/>
+		<Add filter_name="total_score"/>
+	</PROTOCOLS>
+	<OUTPUT scorefxn="ref15"/>
+</ROSETTASCRIPTS>
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+core.scoring.etable: Starting energy table calculation
+core.scoring.etable: smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: Finished calculating energy tables.
+basic.io.database: Database file opened: scoring/score_functions/PairEPotential/pdb_pair_stats_fine
+basic.io.database: Database file opened: scoring/score_functions/InterchainPotential/interchain_env_log.txt
+basic.io.database: Database file opened: scoring/score_functions/InterchainPotential/interchain_pair_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/env_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/cbeta_den.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/pair_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/cenpack_log.txt
+core.scoring.ramachandran: shapovalov_lib::shap_rama_smooth_level of 4( aka highest_smooth ) got activated.
+basic.io.database: Database file opened: scoring/score_functions/rama/shapovalov/kappa25/all.ramaProb
+protocols.jd2.parser.ScoreFunctionLoader: defined score function "ref15" with weights "ref2015"
+protocols.jd2.parser.ScoreFunctionLoader:  setting ref15 weight netcharge to 1
+core.scoring.netcharge_energy.NetChargeEnergySetup: Reading netcharge scoring term setup data from netcharge.charge.
+protocols.jd2.parser.ScoreFunctionLoader: symmetrizing ref15
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "ifcl" of type InitializeFromCommandline
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "resfile" of type ReadResfile
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "extrachi" of type ExtraRotamersGeneric
+core.pack.task.operation.TaskOperation: TaskOperation::parse_tag method called with no effect for Tag with type IncludeCurrent. Probably due to (un/mis)implemented virtual method in derived class.
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "include_curr" of type IncludeCurrent
+protocols.filters.PackStatFilter: Structures with packstat score 0.4 will be filtred.
+protocols.rosetta_scripts.RosettaScriptsParser: Defined filter named "pstat" of type PackStat
+protocols.filters.PackStatFilter: Structures with packstat score 0 will be filtred.
+protocols.rosetta_scripts.RosettaScriptsParser: Defined filter named "pstat_mc" of type PackStat
+protocols.simple_filters.NetChargeFilter: Net charge will be caculated for chain 0 with maximum cutoff 100 and minimum cutoff -100.
+protocols.rosetta_scripts.RosettaScriptsParser: Defined filter named "net_charge" of type NetCharge
+protocols.simple_filters.ScoreTypeFilter: ScoreType filter for score_type total_score with threshold 0.
+protocols.rosetta_scripts.RosettaScriptsParser: Defined filter named "total_score" of type ScoreType
+core.conformation.symmetry.SymmData: [ WARNING ] Setting weight of master jump ( jump-id=4 ) to 1.0 (was undefined)
+core.conformation.symmetry.SymmData: [ WARNING ] Setting jump_group JUMPGROUP2: [master 4]  6:0 
+core.conformation.symmetry.SymmData: [ WARNING ] Setting weight of master jump ( jump-id=1 ) to 1.0 (was undefined)
+core.conformation.symmetry.SymmData: [ WARNING ] Setting jump_group JUMPGROUP3: [master 1]  2:0 
+core.conformation.symmetry.SymmData: symmetry name: dek__2
+core.conformation.symmetry.SymmData: number of subunits: 2
+core.conformation.symmetry.SymmData: number of interfaces: 1
+core.conformation.symmetry.SymmData: score subunit number: VRT0
+core.conformation.symmetry.SymmData: anchor the s/var/spool/sge/wynton/qb3-ad1/job_scripts/164582: line 38: 19586 Illegal instruction     (core dumped) rosetta_scripts.linuxgccrelease -s Re-chained_monomer.pdb -nstruct 1 -parser:protocol design.xml -ignore_zero_occupancy false -out:path:pdb output -out:path:score output -packing:multi_cool_annealer 10 -packing:linmem_ig 10 -run:constant_seed -run:jran $SGE_TASK_ID -out:suffix mutate04_dek_$SGE_TASK_ID -out:no_nstruct_label
+==============================================================
+job_number:                 164582
+exec_file:                  job_scripts/164582
+submission_time:            Thu Nov 17 12:57:28 2022
+owner:                      c-kong
+uid:                        62185
+group:                      wynton-rotation
+gid:                        60001
+sge_o_home:                 /wynton/home/rotation/c-kong
+sge_o_log_name:             c-kong
+sge_o_path:                 /opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/wynton/home/rotation/c-kong/.local/bin:/wynton/home/rotation/c-kong/bin
+sge_o_shell:                /bin/bash
+sge_o_workdir:              /wynton/home/rotation/c-kong/Rosetta/mutate04_dek
+sge_o_host:                 dev2
+account:                    sge
+cwd:                        /wynton/home/rotation/c-kong/Rosetta/mutate04_dek
+stderr_path_list:           NONE:NONE:/wynton/home/rotation/c-kong/Rosetta/mutate04_dek/output
+merge:                      y
+hard resource_list:         mem_free=3G,h_rt=7200
+mail_list:                  c-kong@dev2.wynton.ucsf.edu
+notify:                     FALSE
+job_name:                   mutate04_dek.job
+stdout_path_list:           NONE:NONE:/wynton/home/rotation/c-kong/Rosetta/mutate04_dek/output
+jobshare:                   0
+hard_queue_list:            !*gpu.q
+restart:                    y
+shell_list:                 NONE:/bin/bash
+env_list:                   TERM=NONE
+script_file:                mutate04_dek.job
+project:                    wynton-rotation
+job-array tasks:            1-100:1
+binding:                    NONE
+job_type:                   NONE
+usage         1:            cpu=00:00:03, mem=0.27482 GB s, io=0.00929 GB, vmem=135.652M, maxvmem=135.652M
+usage         2:            cpu=00:00:02, mem=0.11596 GB s, io=0.00945 GB, vmem=100.410M, maxvmem=100.410M
+usage         3:            cpu=00:00:26, mem=8.46898 GB s, io=0.13914 GB, vmem=892.719M, maxvmem=892.719M
+usage         4:            cpu=00:00:13, mem=3.10622 GB s, io=0.13902 GB, vmem=363.340M, maxvmem=363.340M
+usage         5:            cpu=00:00:08, mem=0.71346 GB s, io=0.00906 GB, vmem=136.031M, maxvmem=136.031M
+usage         6:            cpu=00:00:04, mem=0.39493 GB s, io=0.01124 GB, vmem=141.047M, maxvmem=141.047M
+usage         7:            cpu=00:00:36, mem=20.51612 GB s, io=0.13904 GB, vmem=861.824M, maxvmem=918.461M
+usage         8:            cpu=00:00:33, mem=17.99595 GB s, io=0.13932 GB, vmem=892.586M, maxvmem=918.578M
+usage         9:            cpu=00:00:45, mem=28.17566 GB s, io=0.13929 GB, vmem=911.609M, maxvmem=918.594M
+usage        10:            cpu=00:00:26, mem=10.77136 GB s, io=0.13945 GB, vmem=878.715M, maxvmem=918.316M
+usage        11:            cpu=00:00:06, mem=0.68796 GB s, io=0.11964 GB, vmem=275.609M, maxvmem=275.609M
+usage        12:            cpu=00:00:04, mem=0.43385 GB s, io=0.01303 GB, vmem=144.188M, maxvmem=144.188M
+usage        13:            cpu=00:00:36, mem=20.43769 GB s, io=0.13925 GB, vmem=886.945M, maxvmem=918.324M
+usage        14:            cpu=00:00:27, mem=9.16833 GB s, io=0.13914 GB, vmem=892.711M, maxvmem=892.711M
+usage        15:            cpu=00:00:47, mem=27.44042 GB s, io=0.13895 GB, vmem=886.684M, maxvmem=918.355M
+usage        16:            cpu=00:00:51, mem=30.54218 GB s, io=0.13914 GB, vmem=911.312M, maxvmem=918.176M
+usage        17:            cpu=00:00:16, mem=3.86140 GB s, io=0.13894 GB, vmem=362.699M, maxvmem=362.699M
+usage        18:            cpu=00:00:32, mem=14.24216 GB s, io=0.13914 GB, vmem=914.426M, maxvmem=918.465M
+usage        19:            cpu=00:00:22, mem=6.13183 GB s, io=0.13879 GB, vmem=380.484M, maxvmem=380.484M
+usage        20:            cpu=00:00:55, mem=34.45798 GB s, io=0.13892 GB, vmem=911.336M, maxvmem=918.355M
+usage        21:            cpu=00:01:08, mem=45.77736 GB s, io=0.13889 GB, vmem=911.543M, maxvmem=918.562M
+usage        22:            cpu=00:00:35, mem=16.37106 GB s, io=0.13894 GB, vmem=887.520M, maxvmem=918.332M
+usage        23:            cpu=00:00:23, mem=6.36666 GB s, io=0.13897 GB, vmem=382.516M, maxvmem=382.516M
+usage        24:            cpu=00:00:07, mem=0.80426 GB s, io=0.12871 GB, vmem=283.922M, maxvmem=283.922M
+usage        25:            cpu=00:00:39, mem=19.70012 GB s, io=0.13897 GB, vmem=916.887M, maxvmem=918.352M
+usage        26:            cpu=00:00:31, mem=12.92463 GB s, io=0.13894 GB, vmem=878.414M, maxvmem=918.105M
+usage        27:            cpu=00:00:33, mem=14.36835 GB s, io=0.13903 GB, vmem=914.309M, maxvmem=918.289M
+usage        28:            cpu=00:00:01, mem=0.06837 GB s, io=0.00854 GB, vmem=90.629M, maxvmem=90.629M
+usage        29:            cpu=00:03:19, mem=196.21828 GB s, io=0.13917 GB, vmem=1.095G, maxvmem=1.095G
+usage        30:            cpu=00:00:01, mem=0.10790 GB s, io=0.00932 GB, vmem=99.637M, maxvmem=99.637M
+usage        31:            cpu=00:00:02, mem=0.13162 GB s, io=0.00950 GB, vmem=100.086M, maxvmem=100.086M
+usage        32:            cpu=00:03:50, mem=230.01840 GB s, io=0.13940 GB, vmem=1.095G, maxvmem=1.095G
+usage        33:            cpu=00:00:42, mem=25.82423 GB s, io=0.13929 GB, vmem=911.555M, maxvmem=918.547M
+usage        34:            cpu=00:00:19, mem=5.05006 GB s, io=0.13914 GB, vmem=369.074M, maxvmem=369.074M
+usage        35:            cpu=00:00:23, mem=6.47397 GB s, io=0.13914 GB, vmem=383.082M, maxvmem=383.082M
+usage        36:            cpu=00:00:40, mem=26.78244 GB s, io=0.13989 GB, vmem=1.095G, maxvmem=1.095G
+usage        37:            cpu=00:00:01, mem=0.10045 GB s, io=0.00946 GB, vmem=100.410M, maxvmem=100.410M
+usage        38:            cpu=00:00:42, mem=25.94893 GB s, io=0.13939 GB, vmem=911.383M, maxvmem=918.211M
+usage        39:            cpu=00:00:18, mem=3.24429 GB s, io=0.13768 GB, vmem=344.328M, maxvmem=344.328M
+usage        40:            cpu=00:00:12, mem=1.45938 GB s, io=0.13771 GB, vmem=294.484M, maxvmem=294.484M
+usage        41:            cpu=00:00:11, mem=1.17126 GB s, io=0.01239 GB, vmem=144.254M, maxvmem=144.254M
+usage        42:            cpu=00:00:17, mem=4.62988 GB s, io=0.13943 GB, vmem=550.180M, maxvmem=550.180M
+usage        43:            cpu=00:00:14, mem=3.42235 GB s, io=0.13932 GB, vmem=367.516M, maxvmem=367.516M
+usage        44:            cpu=00:00:07, mem=1.33058 GB s, io=0.13830 GB, vmem=344.324M, maxvmem=344.324M
+usage        45:            cpu=00:00:04, mem=0.43907 GB s, io=0.02265 GB, vmem=179.602M, maxvmem=179.602M
+usage        46:            cpu=00:00:14, mem=3.32022 GB s, io=0.13890 GB, vmem=356.703M, maxvmem=356.703M
+usage        47:            cpu=00:00:10, mem=2.14080 GB s, io=0.13796 GB, vmem=356.516M, maxvmem=356.516M
+usage        48:            cpu=00:00:05, mem=0.55690 GB s, io=0.02270 GB, vmem=179.812M, maxvmem=179.812M
+usage        49:            cpu=00:03:31, mem=209.39396 GB s, io=0.13938 GB, vmem=1.095G, maxvmem=1.095G
+usage        50:            cpu=00:00:38, mem=21.81192 GB s, io=0.13933 GB, vmem=861.840M, maxvmem=918.605M
+usage        51:            cpu=00:00:12, mem=2.89740 GB s, io=0.13947 GB, vmem=365.777M, maxvmem=365.777M
+usage        52:            cpu=00:00:10, mem=2.37733 GB s, io=0.13940 GB, vmem=358.691M, maxvmem=358.691M
+usage        53:            cpu=00:00:02, mem=0.10804 GB s, io=0.00933 GB, vmem=97.469M, maxvmem=97.469M
+usage        54:            cpu=00:00:02, mem=0.11575 GB s, io=0.00967 GB, vmem=100.426M, maxvmem=100.426M
+usage        55:            cpu=00:00:28, mem=13.60906 GB s, io=0.13937 GB, vmem=887.762M, maxvmem=918.645M
+usage        56:            cpu=00:00:14, mem=3.32763 GB s, io=0.13928 GB, vmem=366.055M, maxvmem=366.055M
+usage        57:            cpu=00:03:44, mem=215.77738 GB s, io=0.13918 GB, vmem=1.095G, maxvmem=1.095G
+usage        58:            cpu=00:02:38, mem=155.22301 GB s, io=0.13966 GB, vmem=1.095G, maxvmem=1.095G
+usage        59:            cpu=00:00:09, mem=2.07179 GB s, io=0.13963 GB, vmem=358.941M, maxvmem=358.941M
+usage        60:            cpu=00:00:19, mem=8.17954 GB s, io=0.14002 GB, vmem=878.711M, maxvmem=918.406M
+usage        61:            cpu=00:01:59, mem=109.42483 GB s, io=0.13952 GB, vmem=1.095G, maxvmem=1.095G
+usage        62:            cpu=00:00:03, mem=0.40543 GB s, io=0.01461 GB, vmem=153.043M, maxvmem=153.043M
+usage        63:            cpu=00:03:36, mem=215.53278 GB s, io=0.13916 GB, vmem=1.095G, maxvmem=1.095G
+usage        64:            cpu=00:03:23, mem=209.64853 GB s, io=0.13916 GB, vmem=1.094G, maxvmem=1.094G
+usage        65:            cpu=00:00:27, mem=9.97647 GB s, io=0.13897 GB, vmem=892.898M, maxvmem=892.898M
+usage        66:            cpu=00:01:28, mem=74.01814 GB s, io=0.13951 GB, vmem=1.095G, maxvmem=1.095G
+usage        67:            cpu=00:00:12, mem=2.54025 GB s, io=0.13946 GB, vmem=358.691M, maxvmem=358.691M
+usage        68:            cpu=00:00:02, mem=0.13378 GB s, io=0.00939 GB, vmem=99.902M, maxvmem=99.902M
+usage        69:            cpu=00:03:04, mem=179.18692 GB s, io=0.13940 GB, vmem=1.095G, maxvmem=1.095G
+usage        70:            cpu=00:02:21, mem=132.15994 GB s, io=0.13939 GB, vmem=1.095G, maxvmem=1.095G
+usage        71:            cpu=00:00:06, mem=0.98336 GB s, io=0.13794 GB, vmem=299.910M, maxvmem=299.910M
+usage        72:            cpu=00:00:19, mem=5.95308 GB s, io=0.13940 GB, vmem=892.738M, maxvmem=892.738M
+usage        73:            cpu=00:02:05, mem=114.76901 GB s, io=0.13942 GB, vmem=1.095G, maxvmem=1.095G
+usage        74:            cpu=00:01:02, mem=45.76611 GB s, io=0.13928 GB, vmem=1.095G, maxvmem=1.095G
+usage        75:            cpu=00:00:10, mem=1.81103 GB s, io=0.13758 GB, vmem=344.133M, maxvmem=344.133M
+usage        76:            cpu=00:00:01, mem=0.06538 GB s, io=0.00865 GB, vmem=92.688M, maxvmem=92.688M
+usage        77:            cpu=00:00:03, mem=0.32689 GB s, io=0.00967 GB, vmem=141.637M, maxvmem=141.637M
+usage        78:            cpu=00:00:04, mem=0.49047 GB s, io=0.12015 GB, vmem=275.668M, maxvmem=275.668M
+usage        79:            cpu=00:00:01, mem=0.08421 GB s, io=0.00902 GB, vmem=92.688M, maxvmem=92.688M
+usage        80:            cpu=00:02:28, mem=144.78447 GB s, io=0.13988 GB, vmem=1.095G, maxvmem=1.095G
+usage        81:            cpu=00:00:15, mem=4.05840 GB s, io=0.13939 GB, vmem=376.656M, maxvmem=376.656M
+usage        82:            cpu=00:00:01, mem=0.09143 GB s, io=0.00891 GB, vmem=99.820M, maxvmem=99.820M
+usage        83:            cpu=00:00:01, mem=0.06704 GB s, io=0.00864 GB, vmem=92.688M, maxvmem=92.688M
+usage        84:            cpu=00:00:14, mem=3.51140 GB s, io=0.13943 GB, vmem=370.062M, maxvmem=370.062M
+usage        85:            cpu=00:00:01, mem=0.10340 GB s, io=0.00899 GB, vmem=100.410M, maxvmem=100.410M
+usage        86:            cpu=00:00:01, mem=0.07691 GB s, io=0.00893 GB, vmem=90.887M, maxvmem=90.887M
+usage        87:            cpu=00:00:33, mem=19.56324 GB s, io=0.13965 GB, vmem=911.363M, maxvmem=918.258M
+usage        88:            cpu=00:00:01, mem=0.08623 GB s, io=0.00873 GB, vmem=98.605M, maxvmem=98.605M
+usage        89:            cpu=00:00:12, mem=2.95194 GB s, io=0.13939 GB, vmem=364.930M, maxvmem=364.930M
+usage        90:            cpu=00:00:01, mem=0.11223 GB s, io=0.00916 GB, vmem=100.414M, maxvmem=100.414M
+usage        91:            cpu=00:00:25, mem=12.98040 GB s, io=0.13946 GB, vmem=886.699M, maxvmem=918.406M
+usage        92:            cpu=00:00:02, mem=0.11237 GB s, io=0.00935 GB, vmem=98.613M, maxvmem=98.613M
+usage        93:            cpu=00:00:01, mem=0.08599 GB s, io=0.00889 GB, vmem=96.809M, maxvmem=96.809M
+usage        94:            cpu=00:03:52, mem=231.82883 GB s, io=0.13899 GB, vmem=1.095G, maxvmem=1.095G
+usage        95:            cpu=00:00:10, mem=1.98071 GB s, io=0.13796 GB, vmem=356.516M, maxvmem=356.516M
+usage        96:            cpu=00:00:14, mem=3.69370 GB s, io=0.13934 GB, vmem=370.090M, maxvmem=370.090M
+usage        97:            cpu=00:00:01, mem=0.06851 GB s, io=0.00839 GB, vmem=95.266M, maxvmem=95.266M
+usage        98:            cpu=00:00:10, mem=2.08414 GB s, io=0.13787 GB, vmem=351.074M, maxvmem=351.074M
+usage        99:            cpu=00:02:57, mem=162.86479 GB s, io=0.13894 GB, vmem=1.095G, maxvmem=1.095G
+usage       100:            cpu=00:03:26, mem=204.44865 GB s, io=0.13939 GB, vmem=1.095G, maxvmem=1.095G
+binding       1:            NONE
+binding       2:            NONE
+binding       3:            NONE
+binding       4:            NONE
+binding       5:            NONE
+binding       6:            NONE
+binding       7:            NONE
+binding       8:            NONE
+binding       9:            NONE
+binding      10:            NONE
+binding      11:            NONE
+binding      12:            NONE
+binding      13:            NONE
+binding      14:            NONE
+binding      15:            NONE
+binding      16:            NONE
+binding      17:            NONE
+binding      18:            NONE
+binding      19:            NONE
+binding      20:            NONE
+binding      21:            NONE
+binding      22:            NONE
+binding      23:            NONE
+binding      24:            NONE
+binding      25:            NONE
+binding      26:            NONE
+binding      27:            NONE
+binding      28:            NONE
+binding      29:            NONE
+binding      30:            NONE
+binding      31:            NONE
+binding      32:            NONE
+binding      33:            NONE
+binding      34:            NONE
+binding      35:            NONE
+binding      36:            NONE
+binding      37:            NONE
+binding      38:            NONE
+binding      39:            NONE
+binding      40:            NONE
+binding      41:            NONE
+binding      42:            NONE
+binding      43:            NONE
+binding      44:            NONE
+binding      45:            NONE
+binding      46:            NONE
+binding      47:            NONE
+binding      48:            NONE
+binding      49:            NONE
+binding      50:            NONE
+binding      51:            NONE
+binding      52:            NONE
+binding      53:            NONE
+binding      54:            NONE
+binding      55:            NONE
+binding      56:            NONE
+binding      57:            NONE
+binding      58:            NONE
+binding      59:            NONE
+binding      60:            NONE
+binding      61:            NONE
+binding      62:            NONE
+binding      63:            NONE
+binding      64:            NONE
+binding      65:            NONE
+binding      66:            NONE
+binding      67:            NONE
+binding      68:            NONE
+binding      69:            NONE
+binding      70:            NONE
+binding      71:            NONE
+binding      72:            NONE
+binding      73:            NONE
+binding      74:            NONE
+binding      75:            NONE
+binding      76:            NONE
+binding      77:            NONE
+binding      78:            NONE
+binding      79:            NONE
+binding      80:            NONE
+binding      81:            NONE
+binding      82:            NONE
+binding      83:            NONE
+binding      84:            NONE
+binding      85:            NONE
+binding      86:            NONE
+binding      87:            NONE
+binding      88:            NONE
+binding      89:            NONE
+binding      90:            NONE
+binding      91:            NONE
+binding      92:            NONE
+binding      93:            NONE
+binding      94:            NONE
+binding      95:            NONE
+binding      96:            NONE
+binding      97:            NONE
+binding      98:            NONE
+binding      99:            NONE
+binding     100:            NONE
+scheduling info:            (Collecting of scheduler job information is turned off)

@@ -1,0 +1,3 @@
+SEQUENCE: 
+SCORE: total_score dslf_fa13    fa_atr    fa_dun   fa_elec fa_intra_rep fa_intra_sol_xover4              fa_rep              fa_sol hbond_bb_sc hbond_lr_bb    hbond_sc hbond_sr_bb lk_ball_wtd net_charge netcharge     omega   p_aa_pp pro_close     pstat rama_prepro         ref yhh_planarity description 
+SCORE:    -273.802     0.000  -573.918   109.181  -173.618        0.807              15.772              58.027             374.013       0.000       0.000      -2.321     -85.683     -17.158     -2.000     0.000     4.901   -12.062     0.000     0.523     -16.495      44.751         0.000 Re-chained_monomermutate06_dermaseptin_36

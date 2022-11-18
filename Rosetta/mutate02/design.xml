@@ -1,0 +1,92 @@
+<ROSETTASCRIPTS>
+    <!--Score Functions-->
+    <SCOREFXNS> 
+        <ScoreFunction name="ref15" weights="ref2015" symmetric="1">
+            <Reweight scoretype="netcharge" weight="1.0"/>
+            <Set netcharge_setup_file="netcharge.charge"/>
+        </ScoreFunction>
+    </SCOREFXNS>
+    <!-- Residue Selectors-->
+    <RESIDUE_SELECTORS>
+    </RESIDUE_SELECTORS>
+    <!-- Task Operations-->
+    <TASKOPERATIONS>
+        <InitializeFromCommandline name="ifcl"/>
+        <ReadResfile name="resfile" filename="symm_resfile.txt" />
+        <ExtraRotamersGeneric name="extrachi" ex1="1" ex2="1"
+                                ex1_sample_level="1" ex2_sample_level="2"
+                                extrachi_cutoff="14" />
+        <IncludeCurrent name = "include_curr" />
+    </TASKOPERATIONS>
+    <!-- Filters -->
+    <FILTERS>
+        <PackStat name = "pstat" confidence="0" threshold="0.4" repeats="10" />
+        <PackStat name="pstat_mc" threshold="0" repeats="10"/>
+        <NetCharge name = "net_charge" confidence = "0" />
+        <ScoreType name = "total_score" scorefxn="ref15" score_type="total_score"
+                    threshold = "0" />
+    </FILTERS>
+    <!-- Movers -->
+    <MOVERS>
+        <SetupForSymmetry   name="setup_symm" definition="symmdef.txt"/>
+        <SymPackRotamersMover name="pack" scorefxn="ref15"
+						   task_operations="ifcl,resfile,include_curr,extrachi"/>
+        <SymPackRotamersMover name="pack_fast" scorefxn="ref15"
+                task_operations="ifcl,resfile,include_curr"/>
+        <SymMinMover name="min_bb" scorefxn="ref15" tolerance="0.0000001" max_iter="1000" chi="false" bb="true">
+            <MoveMap name="map_bb">
+                <Span begin="1" end="54" bb="true" chi="false" />
+                <Span begin="69" end="112" bb="true" chi="false" />
+            </MoveMap>
+        </SymMinMover>
+        <Idealize name="idealize"/>
+        <SymMinMover name="min_sc" scorefxn="ref15" tolerance="0.0000001" max_iter="1000" chi="true" bb="false">
+			<MoveMap name="map_sc">
+                <Span begin="1" end="54" bb="true" chi="false" />
+                <Span begin="69" end="112" bb="true" chi="false" />
+			</MoveMap>
+		</SymMinMover>
+        <SymMinMover name="min_sc_bb" scorefxn="ref15" tolerance="0.0000001" max_iter="1000" chi="true" bb="true">
+			<MoveMap name="map_sc_bb">
+                <Span begin="1" end="54" bb="true" chi="false" />
+                <Span begin="69" end="112" bb="true" chi="false" />
+			</MoveMap>
+		</SymMinMover>
+        <ParsedProtocol name="parsed_pack_fast">
+            <Add mover_name="pack"/>
+            <Add mover_name="min_bb"/>
+        </ParsedProtocol>
+        <ParsedProtocol name="parsed_pack" >
+			<Add mover_name="pack"/>
+			<Add mover_name="min_bb"/>
+			<Add mover_name="min_sc"/>
+		</ParsedProtocol>
+        <GenericMonteCarlo name="pack_mc" preapply="0" trials="3" temperature="0.03"
+								  filter_name="pstat_mc" sample_type="high" mover_name="parsed_pack">
+				<Filters>
+					<AND filter_name="total_score" temperature="15" sample_type="low"/>
+				</Filters>
+		</GenericMonteCarlo>
+        <GenericMonteCarlo name="pack_fast_mc" preapply="0" trials="2" temperature="0.03"
+								  filter_name="pstat_mc" sample_type="high" mover_name="parsed_pack_fast">
+				<Filters>
+					<AND filter_name="total_score" temperature="15" sample_type="low"/>
+				</Filters>
+		</GenericMonteCarlo>
+    </MOVERS>
+    <!-- Apply to Pose -->
+    <APPLY_TO_POSE>
+    </APPLY_TO_POSE>
+    <!-- Protocols -->
+    <PROTOCOLS>
+        <Add mover_name="setup_symm" />
+        <Add mover_name="parsed_pack_fast"/>
+        <Add mover_name="pack_fast_mc"/>
+        <Add mover_name="pack_mc"/>
+        <Add mover_name="min_sc_bb"/>
+        <Add filter_name="pstat"/>
+        <Add filter_name="net_charge"/>
+        <Add filter_name="total_score" />
+    </PROTOCOLS>
+    <OUTPUT scorefxn="ref15"/>
+</ROSETTASCRIPTS>

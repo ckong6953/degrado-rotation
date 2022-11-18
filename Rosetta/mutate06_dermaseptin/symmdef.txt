@@ -1,0 +1,20 @@
+symmetry_name dermaseptin__2
+E = 2*VRT0_base + 1*(VRT0_base:VRT1_base)
+anchor_residue COM
+virtual_coordinates_start
+xyz VRT0  0.7653989,0.5950059,0.2452194  0.5042133,-0.3176512,-0.8030359  2.5836401,0.2225160,-16.1081440
+xyz VRT0_base  0.7653989,0.5950059,0.2452194  0.5042133,-0.3176512,-0.8030359  -2.5674000,-3.7818000,-17.7584400
+xyz VRT1  -0.7653989,-0.5950059,-0.2452194  -0.5042133,0.3176512,0.8030359  2.5836401,0.2225160,-16.1081440
+xyz VRT1_base  -0.7653989,-0.5950059,-0.2452194  -0.5042133,0.3176512,0.8030359  7.7346803,4.2268321,-14.4578480
+xyz VRT  0.0000000,0.5925906,0.8055038  0.9165514,0.3221345,-0.2369870  2.5836401,0.7656558,-15.3698583
+virtual_coordinates_stop
+connect_virtual JUMP0_to_com VRT0 VRT0_base
+connect_virtual JUMP0_to_subunit VRT0_base SUBUNIT
+connect_virtual JUMP1_to_com VRT1 VRT1_base
+connect_virtual JUMP1_to_subunit VRT1_base SUBUNIT
+connect_virtual JUMP0 VRT VRT0
+connect_virtual JUMP1 VRT0 VRT1
+set_dof JUMP0_to_com x(6.72987653907713) angle_x
+set_dof JUMP0_to_subunit angle_x angle_y angle_z
+set_jump_group JUMPGROUP2 JUMP0_to_com JUMP1_to_com
+set_jump_group JUMPGROUP3 JUMP1_to_subunit JUMP0_to_subunit
